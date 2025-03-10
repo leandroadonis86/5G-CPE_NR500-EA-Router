@@ -55,7 +55,7 @@ There are few options to access for external and internal clients.
 > it's necessary to execute AT+QCFG: “usbnet” command and select the mode for your system to recognize the device via USB. Default configuration is for windows and device VID 0x2C7C and PID 0x0900.
 
 On SSH session Anyone is able to print file content and inspect throw directories. 
-- For vieweing directory contents typed: "cd" and press 2x tab. 
+- For vieweing directory contents type: "cd" and press 2x tab. 
 - For printing content file as ASCII use: printf "%b\n" "$(<testfile)"
 
 For the admin access on SSH session it's able to use tools like:
