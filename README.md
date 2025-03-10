@@ -33,7 +33,7 @@ The hardware on PCB version NR500-WIFI6-V2.0 dated 2023/10/18 is composed with t
 - Macronix KH25L1606E FlashRom of 16Mb 64K each block,
 - Globaltech_DS_GS339 Voltage comparator to indicate the battery level on front leds.
 ### On the back, 
-- no description chip possibly an 8-pin 12v to 5v voltage regulator,
+- no description chip possible 8-pin 12v to 5v voltage regulator,
 - ASIX AX88179 Gigabit Ethernet Controller for USB 3.0.
 
 There are currently no drivers or fixes for the device software, contacting the manufacturer is not possible to correct previously announced security flaws. The only support available is on the (Quectel)[https://forums.quectel.com/tag/5g] forums, which they provide some useful applications and firmware for the modem. For this router the firmware available from Quectel it will remove some functions and modules, like wifi AP, due to be a standart version of the firmware. Router will no longer use Wifi and work only as a modem connected by USB although it will fix all the issues.
