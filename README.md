@@ -44,7 +44,7 @@ On SSH session Anyone is able to print file content and inspect throw directorie
 - For vieweing directory contents typed: "cd" and press 2x tab. 
 - For printing content file as ASCII use: printf "%b\n" "$(<testfile)"
 
-For the admin account access on SHH session it's able to use tools like:
+For the admin access on SSH session it's able to use tools like:
 - "vi" for editing and create files
 - "hexdump" to print file content as binary, hex format
 - "tftp" transfer files to a server
