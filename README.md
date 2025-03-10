@@ -26,7 +26,7 @@ The software contains an operating system based on linux (Yocto) [https://www.yo
 The hardware on PCB version NR500-WIFI6-V2.0 dated 2023/10/18 is composed with two external TS-9 antennas outputs, output for Ethernet and Telephone, USB Type C, battery connector and two outputs for SIM card is made up of the following integrated circuit components: 
 ### On the front, 
 - Processor known as RG500U from Quectel,
-- Built-in Quectel FC06E module similar to the Qualcomm module,
+- Built-in Quectel FC06E module similar to the Qualcomm QCA6390 module,
 - ICS Logic Eutech EUP8202 controls battery charge located near the battery connector,
 - Microsemi MSC Le6943 IC for SLIC telephone voice line,
 - TDA L69BW protects the voltage on the telephone line,
