@@ -65,7 +65,7 @@ For the admin access on SSH session it's able to use tools like:
 > [!NOTE]
 > it's necessary to change the mount permissions to WR using command mount: "mount -o rw,remount /"
 
-On Web http access with builtin ASP and nginx service, the REST get\post commands from the forms are hanble by customized jhttpd service. Jhttpd is responsable to receive the JSON requests "/goform/formJsonAjaxReq" and execute files in the usr/bin/ directory while JBC control and allow the MVC.
+On Web http access with builtin ASP and nginx service, the REST get\post commands from the forms are handle by customized jhttpd service. Jhttpd is responsable to receive the JSON requests "/goform/formJsonAjaxReq" and execute files in the usr/bin/ directory while JBC control and allow the MVC.
 
 The Good News is iptables is available and running on the system. Admin can block any access permanently to local or from internet with specified rule.
 
