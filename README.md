@@ -10,7 +10,7 @@ Fix, Debug, Access, Tools, Tests and more functionalities for this router.
 
 ## Disclaimer
 
-The code and scripts provided herein are for informational and educational purposes only. By using this code, you acknowledge and agree to the following terms:
+The code and scripts provided herein are for educational purposes only. By using this code, you acknowledge and agree to the following terms:
   1. Use at Your Own Risk: The authors and contributors of this code are not responsible for any damages, losses, or issues that may arise from its use. You use this code at your own risk.
   2. Outdated or Incompatible: The code may be outdated or incompatible with your specific version of software, device, or environment. It is your responsibility to ensure that the code is appropriate for your particular circumstances.
   3. Technical Knowledge Required: This code is intended for individuals with a reasonable level of technical knowledge. You should only use this code if you are confident in your ability to understand and troubleshoot any potential issues.
@@ -31,9 +31,14 @@ https://github.com/advisories/GHSA-m584-rmpj-6q5p
 
 ## Access
 
-There are few options to access for external web and internal clients. The SSH as referend in the "Issues" is the most easiest access by just using a user login althouth is higly restricted access. There is also a Telnet access available to a restrinted running service JBoneOS with a simple admin menu to explore. A router webpage with a root access providing more options like debug mode switch for wifi, debug on switch, usb switch mode. There is an AT Command webpage available to anyone also referend in "Issues". Adbd service file is present on this router but is not possible to turn it on just using the AT command AT+QCFG because it's unavaible by default and it will bring settings back different from other firmware versions that was possible to switch abd on with a session token and was already configured in the system just needed to turn on. I've looked and debuged the adbd service file, similar code to one available in CodeLinaro but it was customized by JBC when it was compiled, able to remove the "disable by jbc" and run the service althought it's unable to find any device to connect throw the listen 5555 port, still on WIP. There is acessible UART on PCB for 1.8v with few available boot options and if device drivers are installed it's possible to connect on 4 COM ports for especific use or directly as a RDIS modem.
+There are few options to access for external and internal clients. 
+- The SSH as referend in the "Issues" is the easiest access by just using a user login althouth is higly restricted access. 
+- There is also Telnet access available to a restrinted running service JBoneOS with a simple admin menu to explore. 
+- Router webpage with a root access providing more options like debug mode switch for wifi, debug on switch, usb switch mode. There is an AT Command webpage available to anyone also referend in "Issues". 
+- Adbd service file is present on this router but is not possible to turn it on just using the AT command AT+QCFG because it's unavaible by default and it will bring settings back different from other firmware versions that was possible to switch abd on with a session token and was already configured in the system. I've looked and debuged the adbd service file, similar code to one available in CodeLinaro but it was customized by JBC when it was compiled, able to remove the "disable by jbc" and run the service althought it's unable to find any device to connect throw the listen 5555 port, still on WIP. 
+- There is acessible UART on PCB for 1.8v with few available boot options and if device drivers are installed it's possible to connect on 4 COM ports for especific use or directly as a RDIS modem.
 > [!NOTE]
-> it's necessary to execute AT+QCFG: “usbnet” command to select the compactible mode for your system reconize the device via USB according if it's windows or linux. Default configuration is for windows and device VID 0x2C7C and PID 0x0900.
+> it's necessary to execute AT+QCFG: “usbnet” command and select the mode for your system to recognize the device via USB. Default configuration is for windows and device VID 0x2C7C and PID 0x0900.
 
 On SSH session Anyone is able to print file content and inspect throw directories. 
 - For vieweing directory contents typed: "cd" and press 2x tab. 
