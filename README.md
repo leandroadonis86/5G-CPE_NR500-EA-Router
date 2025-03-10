@@ -32,7 +32,7 @@ https://github.com/advisories/GHSA-m584-rmpj-6q5p
 ## Access
 
 There are few options to access for external and internal clients. 
-- The SSH as referend in the "Issues" is the easiest access by just using a user login althouth is higly restricted access. 
+- The SSH as referend in the "Issues" is the easiest access by using a user login althouth is highly restricted access. 
 - There is also Telnet access available to a restrinted running service JBoneOS with a simple admin menu to explore. 
 - Router webpage with a root access providing more options like debug mode switch for wifi, debug on switch, usb switch mode. There is an AT Command webpage available to anyone also referend in "Issues". 
 - Adbd service file is present on this router but is not possible to turn it on just using the AT command AT+QCFG because it's unavaible by default and it will bring settings back different from other firmware versions that was possible to switch abd on with a session token and was already configured in the system. I've looked and debuged the adbd service file, similar code to one available in CodeLinaro but it was customized by JBC when it was compiled, able to remove the "disable by jbc" and run the service althought it's unable to find any device to connect throw the listen 5555 port, still on WIP. 
