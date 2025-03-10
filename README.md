@@ -23,7 +23,7 @@ By proceeding to use this code, you accept and agree to this disclaimer in its e
 The software contains an operating system based on linux (Yocto) [https://www.yoctoproject.org/] distributed by Unisoc with some of the controllers that can be obtained and adapted from OpenWRT or CodeLinaro projects. In this project presented, it 
  can be seen that it was adapted from other similar routers such as those being distributed by Airtel and Unicom operators. For development in this environment and connection of the modules present in the device it was possibly develop with Qualcomm SDK and OpenQuectel base code. There are other drivers that need to be directly embedded into the system such as the AX88179A Gigabit Ethernet, Spreadtrum SC2730 or Qualcomm QCA6390 wifi. It has a customized integrated JBC system, JBoneOS from JBoneOS Cloud Technologies that limits access restrictions to internal commands or services, supervise and make stats of the entire ordering system. Some binary files were customized to work together with JBC, for ex. Jhttpd, Adbd, Telnet.
 
-The hardware on PCB version NR500-WIFI6-V2.0 dated 2023/10/18 is composed with two external TS-9 antennas outputs, output for Ethernet and Telephone, USB Type C, battery connector and two outputs for SIM card is made up of the following integrated circuit components: 
+The hardware on PCB version NR500-WIFI6-V2.0 dated 2023/10/18 is composed with two external TS-9 antennas outputs, output for Ethernet and Telephone, USB Type C, battery connector and two inputs for SIM card is made up of the following integrated circuit components: 
 ### On the front, 
 - Processor known as RG500U from Quectel,
 - Built-in Quectel FC06E module similar to the Qualcomm QCA6390 module,
@@ -46,26 +46,26 @@ https://github.com/advisories/GHSA-m584-rmpj-6q5p
 ## Access
 
 There are few options to access for external and internal clients. 
-- The SSH as referend in the "Issues" is the easiest access by using a user login althouth is highly restricted access. 
-- There is also Telnet access available to a restricted running service JBoneOS with simple admin menu. 
-- Router webpage with a root access providing more options like debug mode switch for wifi, debug on switch, usb switch mode. There is an AT Command webpage available to anyone also referend in "Issues". 
-- Adbd service file is present on this router but is not possible to turn it on just using the AT command AT+QCFG because it's unavaible by default and it will bring settings back different from other firmware versions that was possible to switch abd on with a session token and was already configured in the system. I've looked and debuged the adbd service file, similar code to one available in CodeLinaro but it was customized by JBC when it was compiled, able to remove the "disable by jbc" and run the service althought it's unable to find any device to connect throw the listen 5555 port, still on WIP. 
+- The `SSH` as referend in the "Issues" is the easiest access by using a user login althouth is highly restricted access. 
+- There is also `Telnet` access available to a restricted running service JBoneOS with simple admin menu. 
+- Router `http:\\` webpage with a root access providing more options like debug mode switch for wifi, debug on switch, usb switch mode. There is an "AT Command" webpage available to anyone also referend in "Issues". 
+- Adbd service file is present on this router but is not possible to turn it on just using the AT command `AT+QCFG` because it's unavaible by default and it will bring settings back different from other firmware versions that was possible to switch abd on with a session token and was already configured in the system. I've looked and debuged the adbd service file, similar code to one available in CodeLinaro but it was customized by JBC when it was compiled, able to remove the `disable by jbc` and run the service althought it's unable to find any device to connect throw the listen 5555 port, still on WIP. 
 - There is accessible UART on PCB for 1.8v with few available boot options and if device drivers are installed it's possible to connect on 4 COM ports for specific use or directly as a RNDIS modem.
 > [!NOTE]
-> it's necessary to execute AT+QCFG: “usbnet” command and select the mode for your system to recognize device via USB. Default configuration is for windows, device with VID:0x2C7C and PID:0x0900.
+> it's necessary to execute `AT+QCFG:“usbnet”` command and select the mode for your system to recognize device via USB. Default configuration is for windows, device with `VID:0x2C7C PID:0x0900`.
 
 On SSH session Anyone is able to print file content and inspect throw directories. 
-- For vieweing directory contents type: "cd" and press 2x tab. 
-- For printing content file as ASCII use: printf "%b\n" "$(<testfile)"
+- For vieweing directory contents type: `cd` and press 2x tab. 
+- For printing content file as ASCII use: `printf "%b\n" "$(<testfile)"`
 
 For the admin access on SSH session it's able to use tools like:
-- "vi" for editing and create files
-- "hexdump" to print file content as binary, hex format
-- "tftp" transfer files to a server
+- `vi` for editing and create files
+- `hexdump` to print file content as binary, hex format
+- `tftp` transfer files to a server
 > [!NOTE]
-> it's necessary to change the mount permissions to WR using command mount: "mount -o rw,remount /"
+> it's necessary to change the mount permissions to WR using command mount: `mount -o rw,remount /`
 
-On Web http access with builtin ASP and nginx service, the REST get\post commands from the forms are handle by customized jhttpd service. Jhttpd is responsable to receive the JSON requests "/goform/formJsonAjaxReq" and execute files in the usr/bin/ directory while JBC control and allow the MVC.
+On Web http access with builtin ASP and nginx service, the REST get\post commands from the forms are handle by customized jhttpd service. Jhttpd is responsable to receive the JSON requests `/goform/formJsonAjaxReq` and execute files in the `usr/bin/` directory while JBC control and allow the MVC.
 
 The Good News is iptables, it's available and running. Admin can block any access permanently to local or internet with specified rule.
 
