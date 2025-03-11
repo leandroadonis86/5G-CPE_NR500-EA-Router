@@ -1,4 +1,4 @@
-# 5G-CPE_NR500-EA-Router
+# 5G-CPE NR500-EA Router
 Fix, Debug, Access, Tools, Tests and more functionalities for this router.
 
 + SW, RG500UEAABxCOMSLICv3.4.2731.16.43
