@@ -20,7 +20,7 @@ By proceeding to use this code, you accept and agree to this disclaimer in its e
 
 ## Router
 
-The software contains an operative system based on linux (Yocto) [https://www.yoctoproject.org/] distributed by Unisoc with some controllers that can be adapted from OpenWRT or CodeLinaro projects. This presented system can be seen from other similar routers such as those being distributed by Airtel and Unicom operators. For development modules Qualcomm SDK and OpenQuectel base code may be used. There are other drivers that need to be directly embedded into the system such as the AX88179A Gigabit Ethernet, Spreadtrum SC2730 or Qualcomm QCA6390 wifi. It has a customized integrated JBC system, JBoneOS from JBoneOS Cloud Technologies that limits access restrictions to internal commands or services, supervise and make stats of the entire ordering system. Some binary files were customized to work together with JBC, for ex. Jhttpd, Adbd, Telnet.
+The software contains an operative system based on linux (Yocto) [https://www.yoctoproject.org/] distributed by Unisoc with some controllers that can be adapted from OpenWRT or (CodeLinaro)[https://git.codelinaro.org/explore/] projects. This presented system can be seen from other similar routers such as those being distributed by Airtel and Unicom operators. For development modules Qualcomm SDK and OpenQuectel base code may be used. There are other drivers that need to be directly embedded into the system such as the AX88179A Gigabit Ethernet, Spreadtrum SC2730 or Qualcomm QCA6390 wifi. It has a customized integrated JBC system, JBoneOS from JBoneOS Cloud Technologies that limits access restrictions to internal commands or services, supervise and make stats of the entire ordering system. Some binary files were customized to work together with JBC, for ex. Jhttpd, Adbd, Telnet.
 
 The hardware on PCB version NR500-WIFI6-V2.0 dated 2023/10/18 is composed with two external TS-9 antennas outputs, output for Ethernet and Telephone, USB Type C, battery connector and two inputs for SIM card is made up of the following integrated circuit components: 
 ### On the front, 
@@ -40,8 +40,34 @@ Currently, there's no firmware upgrade or fixes and contacting the manufacturer 
 
 ## Issues
 
+### Vulnerability
 There are some severe secure internet and Ethernet issues, as claimed on the medium forum. I will not dig on this topic, so here is the link you should be worried if you use this device. The purpose of this repository is to provide information necessary to make you able to fix it on your own.
 https://github.com/advisories/GHSA-m584-rmpj-6q5p
+
+### Hardware
+Keeps rebooting and you don't why? 
+Check Vulnerability section 1st.
+
+### Software
+- No Wifi? 
+Probablity pcie bug or wifi faulty. Have a look on `dmesg`.
+Any of this errors on the list? 
+`c0 cnss: wlan en pin is not supported`
+Any device in `lspci` ?
+```
+01:00.0 Class 0280: 17cb:1103
+00:00.0 Class 0604: 16c3:abcd
+```
+...
+
+- No 5g?
+...
+
+- No USB device?
+...
+
+- No Ethernet?
+Easy solution for now is press RESET altought the problem will obviosly repeat late.
 
 ## Access
 
