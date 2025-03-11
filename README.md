@@ -26,6 +26,8 @@ The hardware interface on PCB version NR500-WIFI6-V2.0 dated 2023/10/18 is compo
 
 ### Electronics
 
+![alt text](https://github.com/leandroadonis86/5G-CPE_NR500-EA-Router/blob/main/PCB_design.png?raw=true)
+
 #### On the front, 
 - Processor RG500U-EA, from Quectel,
 - Built-in Quectel FC06E module, similar to the Qualcomm QCA6390 module,
