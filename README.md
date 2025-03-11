@@ -41,7 +41,7 @@ Currently, there's no firmware upgrade or fixes and contacting the manufacturer 
 ## Issues
 
 ### Vulnerability
-There are some severe insecure internet and Ethernet issues, as claimed on the medium forum. I will not dig in this topic, so here is the link you should be worried if you use this device. The purpose of this repository is to provide information necessary to make you able to fix it on your own.
+There are some severe insecure internet and Ethernet issues, as claimed on the medium forum. I will not dig in this topic, so here is the link you should be worried if you use this device. The purpose of this repository is to provide information to make anyone able to fix it on their own.
 https://github.com/advisories/GHSA-m584-rmpj-6q5p
 
 ### Hardware
