@@ -65,7 +65,7 @@ Any device on `lspci` ?
 ```
 ...
 
-- No 5g resgistration?
+- No 5g internet?
 ...
 
 - No USB device?
