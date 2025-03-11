@@ -102,8 +102,8 @@ The Good News is iptables, it's available and running. Admin can block any acces
 
 ## Tools
 ### Hardware
-
-For Flashrom backup the device is compactible with CH341A MinProgrammer.
+compactible with:
+- CH341A MinProgrammer.
 
 ### Software
 Linux:
