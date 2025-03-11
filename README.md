@@ -23,7 +23,10 @@ By proceeding to use this code, you accept and agree to this disclaimer in its e
 The software contains an operative system based on linux (Yocto) [https://www.yoctoproject.org/] distributed by Unisoc with some controllers that can be adapted from OpenWRT or (CodeLinaro)[https://git.codelinaro.org/explore/] projects. This presented system can be seen from other similar routers such as those being distributed by Airtel and Unicom operators. For development modules Qualcomm SDK and OpenQuectel base code may be used. There are other drivers that need to be directly embedded into the system such as the AX88179A Gigabit Ethernet, Spreadtrum SC2730 or Qualcomm QCA6390 wifi. It has a customized integrated JBC system, JBoneOS from JBoneOS Cloud Technologies that limits access restrictions to internal commands or services, supervise and make stats of the entire ordering system. Some binary files were customized to work together with JBC, for ex. Jhttpd, Adbd, Telnet.
 
 The hardware on PCB version NR500-WIFI6-V2.0 dated 2023/10/18 is composed with two external TS-9 antennas outputs, output for Ethernet and Telephone, USB Type C, battery connector and two inputs for SIM card is made up of the following integrated circuit components: 
-### On the front, 
+
+### Electronics
+
+#### On the front, 
 - Processor RG500U-EA, from Quectel,
 - Built-in Quectel FC06E module, similar to the Qualcomm QCA6390 module,
 - ICS Logic Eutech EUP8202, controls battery charge located near the battery connector,
@@ -31,7 +34,8 @@ The hardware on PCB version NR500-WIFI6-V2.0 dated 2023/10/18 is composed with t
 - TDA L69BW, protects voltage on the phone line,
 - Macronix KH25L1606E FlashRom, of 16Mb 64K each block,
 - Globaltech_DS_GS339 Voltage comparator, indicate the battery level on front leds.
-### On the back, 
+
+#### On the back, 
 - chip 8-pin 12v to 5v voltage regulator, for 7.4v Li-on batery,
 - ASIX AX88179 Gigabit Ethernet Controller, for USB 3.0.
 
