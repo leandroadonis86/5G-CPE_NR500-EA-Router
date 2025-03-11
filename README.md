@@ -72,6 +72,7 @@ Any device on `lspci` in your router device?
 00:00.0 Class 0604: 16c3:abcd refer to "Synopsys, Inc. HAPS USB3 xHCI controller (DWC_usb3) / PCIe bridge"
 ...
 
+
 - No 5g internet?
 ...
 
