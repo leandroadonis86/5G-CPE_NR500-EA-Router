@@ -57,7 +57,9 @@ Check Vulnerability section 1st.
 Probablity pcie bug or wifi faulty. Have a look on `dmesg`.
 
 Any of this errors on the list? 
-`c0 cnss: wlan en pin is not supported`
+```
+c0 cnss: wlan en pin is not supported
+```
 
 Any device on `lspci` ?
 ```
