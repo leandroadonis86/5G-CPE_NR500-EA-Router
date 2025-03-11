@@ -68,6 +68,7 @@ Any device on `lspci` in your router device?
 00:00.0 Class 0604: 16c3:abcd
 ```
 01:00.0 Class 0280: 17cb:1103 refer to "QCNFA765 Wireless Network Adapter" 
+
 00:00.0 Class 0604: 16c3:abcd refer to "Synopsys, Inc. HAPS USB3 xHCI controller (DWC_usb3) / PCIe bridge"
 ...
 
