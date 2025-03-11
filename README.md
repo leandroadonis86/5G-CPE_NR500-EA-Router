@@ -54,7 +54,7 @@ Probablity pcie bug or wifi faulty. Have a look on `dmesg`.
 Any of this errors on the list? 
 `c0 cnss: wlan en pin is not supported`
 
-Any device in `lspci` ?
+Any device on `lspci` ?
 ```
 01:00.0 Class 0280: 17cb:1103
 00:00.0 Class 0604: 16c3:abcd
