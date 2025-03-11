@@ -24,16 +24,16 @@ The software contains an operative system based on linux (Yocto) [https://www.yo
 
 The hardware on PCB version NR500-WIFI6-V2.0 dated 2023/10/18 is composed with two external TS-9 antennas outputs, output for Ethernet and Telephone, USB Type C, battery connector and two inputs for SIM card is made up of the following integrated circuit components: 
 ### On the front, 
-- Processor known as RG500U from Quectel,
-- Built-in Quectel FC06E module similar to the Qualcomm QCA6390 module,
-- ICS Logic Eutech EUP8202 controls battery charge located near the battery connector,
-- Microsemi MSC Le6943 IC for SLIC telephone voice line,
-- TDA L69BW protects the voltage on the telephone line,
-- Macronix KH25L1606E FlashRom of 16Mb 64K each block,
-- Globaltech_DS_GS339 Voltage comparator to indicate the battery level on front leds.
+- Processor RG500U-EA, from Quectel,
+- Built-in Quectel FC06E module, similar to the Qualcomm QCA6390 module,
+- ICS Logic Eutech EUP8202, controls battery charge located near the battery connector,
+- Microsemi MSC Le6943 IC, for SLIC phone line,
+- TDA L69BW, protects voltage on the phone line,
+- Macronix KH25L1606E FlashRom, of 16Mb 64K each block,
+- Globaltech_DS_GS339 Voltage comparator, indicate the battery level on front leds.
 ### On the back, 
-- no description chip possible 8-pin 12v to 5v voltage regulator,
-- ASIX AX88179 Gigabit Ethernet Controller for USB 3.0.
+- chip 8-pin 12v to 5v voltage regulator, for 7.4v Li-on batery,
+- ASIX AX88179 Gigabit Ethernet Controller, for USB 3.0.
 
 ### Upgrade
 Currently, there's no firmware upgrade or fixes and contacting the manufacturer they will not answer so is not possible to fix previously announced security flaws. The only support available is on the (Quectel)[https://forums.quectel.com/tag/5g] forums, which they provide some useful applications and firmware for the modem. For this router the firmware available from Quectel remove some functions and modules, like wifi AP, due to be a standart version of the firmware. Router will no longer use Wifi and work only as a modem connected by USB although it will fix all the issues.
