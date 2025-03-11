@@ -20,7 +20,7 @@ By proceeding to use this code, you accept and agree to this disclaimer in its e
 
 ## Router
 
-The software contains an operative system based on linux (Yocto) [https://www.yoctoproject.org/] distributed by Unisoc with some controllers that can be adapted from OpenWRT or (CodeLinaro)[https://git.codelinaro.org/explore/] projects. This presented system can be seen from other similar routers such as those being distributed by Airtel and Unicom operators. For development modules Qualcomm SDK and OpenQuectel base code may be used. There are other drivers that need to be directly embedded into the system such as the AX88179A Gigabit Ethernet, Spreadtrum SC2730 or Qualcomm QCA6390 wifi. It has a customized integrated JBC system, JBoneOS from JBoneOS Cloud Technologies that limits access restrictions to internal commands or services, supervise and make stats of the entire ordering system. Some binary files were customized to work together with JBC, for ex. Jhttpd, Adbd, Telnet.
+The software contains an operative system based on linux (Yocto) [https://www.yoctoproject.org/] distributed by Unisoc with some controllers that can be adapted from OpenWRT or (CodeLinaro) [https://git.codelinaro.org/explore/] projects. This presented system can be seen from other similar routers such as those being distributed by Airtel and Unicom operators. For development modules Qualcomm SDK and OpenQuectel base code may be used. There are other drivers that need to be directly embedded into the system such as the AX88179A Gigabit Ethernet, Spreadtrum SC2730 or Qualcomm QCA6390 wifi. It has a customized integrated JBC system, JBoneOS from JBoneOS Cloud Technologies that limits access restrictions to internal commands or services, supervise and make stats of the entire ordering system. Some binary files were customized to work together with JBC, for ex. Jhttpd, Adbd, Telnet.
 
 The hardware on PCB version NR500-WIFI6-V2.0 dated 2023/10/18 is composed with two external TS-9 antennas outputs, output for Ethernet and Telephone, USB Type C, battery connector and two inputs for SIM card is made up of the following integrated circuit components: 
 
@@ -46,11 +46,12 @@ Currently, there's no firmware upgrade or fixes and contacting the manufacturer 
 
 ### Vulnerability
 There are some severe insecure internet and Ethernet issues, as claimed on the medium forum. I will not dig in this topic, so here is the link you should be worried if you use this device. The purpose of this repository is to provide information to make anyone able to fix it on their own.
+
 https://github.com/advisories/GHSA-m584-rmpj-6q5p
 
 ### Hardware
 Keeps rebooting and you don't why? 
-Check Vulnerability section 1st.
+Check "Vulnerability" section 1st.
 
 ### Software
 - No Wifi? 
@@ -86,9 +87,9 @@ There are few options to access for external and internal clients.
 - Adbd service file is present on this router but is not possible to turn it on just using the AT command `AT+QCFG` because it's unavaible by default and it will bring settings back. Different from other firmware versions that was possible to switch abd on with a session token and was already configured in the system. I've looked and debuged the adbd service file, similar code to one available in CodeLinaro but it was customized by JBC when it was compiled, able to remove the `disable by jbc` and run the service althought it's unable to find any device to connect throw the listen 5555 port, `netstat` did not show any open 5555 port either, still on WIP. 
 - There is accessible UART on PCB for 1.8v with few available boot options and if device drivers are installed it's possible to connect on 4 COM ports for specific use or directly as a RNDIS modem.
 > [!NOTE]
-> it's necessary to execute `AT+QCFG:“usbnet”` command and select the mode for your system to recognize device via USB. Default configuration is for windows, device with `VID:0x2C7C PID:0x0900`.
+> it's necessary to execute `AT+QCFG:“usbnet”` At command and select the mode for operative system you use to recognize device via USB. Default configuration is for windows, device describe as `VID:0x2C7C PID:0x0900`.
 
-On SSH session Anyone is able to print file content and inspect throw directories. 
+On SSH session anyone is able to print file content and inspect throw directories. 
 - For vieweing directory contents type: `cd` and press 2x tab. 
 - For printing content file as ASCII use: `printf "%b\n" "$(<testfile)"`
 
@@ -97,7 +98,8 @@ For the admin access on SSH session it's able to use tools like:
 - `hexdump` to print file content as binary, hex format
 - `tftp` transfer files to a server
 > [!NOTE]
-> it's necessary to change the mount permissions to WR using command mount: `mount -o rw,remount /`
+> it's necessary to change the mount permissions to WR using command mount:
+> `mount -o rw,remount /`
 
 On Web http access with builtin ASP and nginx service, the REST get\post commands from the forms are handle by customized jhttpd service. Jhttpd is responsable to receive the JSON requests `/goform/formJsonAjaxReq` and execute files in the `usr/bin/` directory while JBC control and allow the MVC.
 
