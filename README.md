@@ -55,6 +55,7 @@ Check Vulnerability section 1st.
 ### Software
 - No Wifi? 
 Probablity pcie bug or wifi faulty. Have a look on `dmesg`.
+
 Any of this errors on the list? 
 `c0 cnss: wlan en pin is not supported`
 
