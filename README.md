@@ -55,18 +55,20 @@ Check "Vulnerability" section 1st.
 
 ### Software
 - No Wifi? 
-Probablity pcie bug or wifi faulty. Have a look on `dmesg`.
+Probablity pcie bug or wifi faulty. Have a look on `dmesg` on your device.
 
 Any of this errors on the list? 
 ```
 c0 cnss: wlan en pin is not supported
 ```
 
-Any device on `lspci` ?
+Any device on `lspci` in your router device?
 ```
 01:00.0 Class 0280: 17cb:1103
 00:00.0 Class 0604: 16c3:abcd
 ```
+01:00.0 Class 0280: 17cb:1103 refer to "QCNFA765 Wireless Network Adapter" 
+00:00.0 Class 0604: 16c3:abcd refer to "Synopsys, Inc. HAPS USB3 xHCI controller (DWC_usb3) / PCIe bridge"
 ...
 
 - No 5g internet?
