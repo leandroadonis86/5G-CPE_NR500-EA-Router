@@ -68,7 +68,7 @@ Any device on `lspci` ?
 ...
 
 - No Ethernet?
-Easy solution for now is press RESET altought the problem will obviosly repeat.
+... reset
 
 ## Access
 
