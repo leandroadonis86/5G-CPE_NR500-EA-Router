@@ -7,6 +7,20 @@ Fix, Debug, Access, Tools, Tests and more functionalities for this router.
 + OS release, unisoc-initgc-distro udx710-module+unisoc-initgc-1.0+W24.26.1:16.43.31+user+native (sumo)
 + JBC version, v3.4.2731.16.43
 + Quectel SDK version, quectel_RXX00U_sdk_03.001S09
+```
+,-------------------------------------------------------------,
+| RG500UEAABxCOMSLICv3.4.2731.16.43                           |
+|--------+--------+---------+-------+-------+-----------------|
+| RG500U |   EA   |   ABx   |  COM  | SLIC  | v3.4.2731.16.43 |
+|--------+--------+---------+-------+-------+-----------------|
+|  CPU   | Region |  Extra  | Modem | Phone |    SW version   |
+|        |        | (A/B/x) |   ?   |       |                 |
+| TYPE:U | EMEA & |         |  YES  |  YES  | JBC, JBoneCloud |
+|        | APAC   |  A + B  |       |       |                 |
+'--------+--------+---------+-------+-------+-----------------'
+Region, E: EMEA (Europe, Middle East, and Africa) and A: APAC (Asia-Pacific)
+Extra, A: included, B: included, C: not included
+```
 
 ## Disclaimer
 
@@ -113,19 +127,9 @@ The Good News is iptables, it's available and running. Admin can block any acces
 
 ## Tools
 ### Hardware
-compactible with:
-- CH341A MinProgrammer.
+Device: CH341A MinProgrammer
 
 ### Software
-Linux:
-- GHidra v.11.3
-- Postman v.11.35
-- Flashroom v.1.5.0
-- Binwalk v.2.2.0
-- Pacextractor
-- Jefferson
+Linux: GHidra v.11.3, Postman v.11.35, Flashroom v.1.5.0, Binwalk v.2.2.0, Pacextractor, Jefferson
 
-Windows:
-- QCOM v.1.8
-- SPD Download R.27
-- Platform ADB
+Windows: QCOM v.1.8, SPD Download R.27, Platform ADB
