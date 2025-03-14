@@ -66,10 +66,11 @@ There are some severe insecure internet and Ethernet issues, as claimed on the m
 https://github.com/advisories/GHSA-m584-rmpj-6q5p
 
 ### Hardware
+
 Keeps rebooting and you don't why? 
 Check "Vulnerability" section 1st.
 
-#### - No Wifi? 
+#### No Wifi? 
 
 Probablity pcie bug or wifi faulty. Have a look on `dmesg` on your device.
 
@@ -88,7 +89,7 @@ Any device on `lspci` in your router device?
 
 ...
 
-##### - No Ethernet?
+#### No Ethernet?
 
 ... reset
 
