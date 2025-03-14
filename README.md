@@ -69,7 +69,8 @@ https://github.com/advisories/GHSA-m584-rmpj-6q5p
 Keeps rebooting and you don't why? 
 Check "Vulnerability" section 1st.
 
-- No Wifi? 
+#### - No Wifi? 
+
 Probablity pcie bug or wifi faulty. Have a look on `dmesg` on your device.
 
 Any of this errors on the list? 
@@ -84,9 +85,11 @@ Any device on `lspci` in your router device?
 ```
  - 01:00.0 Class 0280: 17cb:1103 refer to "QCNFA765 Wireless Network Adapter" 
  - 00:00.0 Class 0604: 16c3:abcd refer to "Synopsys, Inc. HAPS USB3 xHCI controller (DWC_usb3) / PCIe bridge"
+
 ...
 
-- No Ethernet?
+##### - No Ethernet?
+
 ... reset
 
 ### Software
