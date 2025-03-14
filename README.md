@@ -69,7 +69,6 @@ https://github.com/advisories/GHSA-m584-rmpj-6q5p
 Keeps rebooting and you don't why? 
 Check "Vulnerability" section 1st.
 
-### Software
 - No Wifi? 
 Probablity pcie bug or wifi faulty. Have a look on `dmesg` on your device.
 
@@ -83,20 +82,20 @@ Any device on `lspci` in your router device?
 01:00.0 Class 0280: 17cb:1103
 00:00.0 Class 0604: 16c3:abcd
 ```
-01:00.0 Class 0280: 17cb:1103 refer to "QCNFA765 Wireless Network Adapter" 
-
-00:00.0 Class 0604: 16c3:abcd refer to "Synopsys, Inc. HAPS USB3 xHCI controller (DWC_usb3) / PCIe bridge"
+ - 01:00.0 Class 0280: 17cb:1103 refer to "QCNFA765 Wireless Network Adapter" 
+ - 00:00.0 Class 0604: 16c3:abcd refer to "Synopsys, Inc. HAPS USB3 xHCI controller (DWC_usb3) / PCIe bridge"
 ...
 
+- No Ethernet?
+... reset
+
+### Software
 
 - No 5g internet?
 ...
 
 - No USB device?
 ...
-
-- No Ethernet?
-... reset
 
 ## Access
 
@@ -133,7 +132,7 @@ JBoneOS >
 > it's necessary to execute `AT+QCFG:“usbnet”` At command and select the mode for operative system you use to recognize device via USB. Default configuration is for windows, device describe as `VID:0x2C7C PID:0x0900`.
 
 On SSH session anyone is able to print file content and inspect throw directories. 
-- For vieweing directory contents type: `cd` and press 2x tab. 
+- For vieweing directory contents type: `cd` and press `tab``tab`. 
 - For printing content file as ASCII use: `printf "%b\n" "$(<testfile)"`
 
 For the admin access on SSH session it's able to use tools like:
