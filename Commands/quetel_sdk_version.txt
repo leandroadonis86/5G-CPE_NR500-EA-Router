@@ -1,0 +1,3 @@
+user@udx710-module:/etc$ echo "$(<./quectel_sdk_version)"
+quectel_RXX00U_sdk_03.001S09
+

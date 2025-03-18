@@ -1,0 +1,6 @@
+ser@udx710-module:/proc$ echo "$(<modules)"
+wlan 6561792 0 - Live 0xffffff80008c4000 (O)
+wlan_cnss_core_pcie 278528 1 wlan, Live 0xffffff800087d000 (O)
+ax88179_178a 53248 0 - Live 0xffffff800086d000
+mii 16384 1 ax88179_178a, Live 0xffffff8000866000
+gpio_wdt_jbc 12288 1 - Live 0xffffff8000860000
