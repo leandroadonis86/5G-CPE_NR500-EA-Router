@@ -1,3 +1,0 @@
-user@udx710-module:/etc$ printf "%s\n" "$(<./jbc_version)"
-v3.4.2731.16.43
-

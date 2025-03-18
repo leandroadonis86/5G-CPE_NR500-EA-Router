@@ -1,4 +1,0 @@
-root@udx710-module:/# lspci
-01:00.0 Class 0280: 17cb:1103
-00:00.0 Class 0604: 16c3:abcd
-
