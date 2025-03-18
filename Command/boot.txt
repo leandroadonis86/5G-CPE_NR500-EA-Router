@@ -1,0 +1,141 @@
+root@udx710-module:/var/log# cat boot
+Thu Jan  1 08:00:08 1970: sdcard is not exist
+Thu Jan  1 08:00:08 1970:  JBC [7.03 6.18] ...  
+Thu Jan  1 08:00:08 1970: hwclock: settimeofday: timeval: Invalid argument
+Thu Jan  1 08:00:08 1970:  JBC [8.12 6.18] ...  
+Thu Jan  1 08:00:08 1970: Stop adbd...
+Thu Jan  1 08:00:08 1970: no adbd found; none killed
+Thu Jan  1 08:00:08 1970: /usr/bin/usbenum.sh: line 145: /sys/kernel/config/usb_gadget/g1/UDC: No such file or directory
+Thu Jan  1 08:00:08 1970: mount: mounting none on /sys/kernel/config failed: Device or resource busy
+Thu Jan  1 08:00:09 1970: /usr/bin/usbenum.sh: line 172: /dev/stty_lte30: No such device
+Thu Jan  1 08:00:09 1970: modem property get: ro.debuggable
+Thu Jan  1 08:00:09 1970: modem property get: persist.vendor.modem.spwdt
+Thu Jan  1 08:00:09 1970:  JBC [9.22 6.18] ^_^, OK  
+Thu Jan  1 08:00:09 1970:  JBC [9.26 6.18] init config  
+Thu Jan  1 08:00:09 1970:  JBC [9.30 6.18] ^_^, DEBUG MODE  
+Thu Jan  1 08:00:09 1970:  JBC [9.32 6.18] ^_^, boot init OK <===  
+Thu Jan  1 08:00:09 1970: Starting adbd...
+Thu Jan  1 08:00:09 1970: /etc/init.d/adbd-init: line 10: setprop: command not found
+Thu Jan  1 08:00:09 1970: mount: mounting none on /sys/kernel/config failed: Device or resource busy
+Thu Jan  1 08:00:10 1970: urandom start: failed.
+Thu Jan  1 08:00:10 1970: modem property get: ro.vendor.modem.alive
+Thu Jan  1 08:00:10 1970: rcS:sysdump_switch_enable start
+Thu Jan  1 08:00:10 1970: INIT: Entering runlevel: 5
+Thu Jan  1 08:00:10 1970: Starting atrouter-service
+Thu Jan  1 08:00:10 1970: Starting system message bus: dbus.
+Thu Jan  1 08:00:10 1970: Starting haveged: haveged: command socket is listening at fd 3
+Thu Jan  1 08:00:10 1970: haveged: haveged starting up
+Thu Jan  1 08:00:10 1970: [  OK  ]
+Thu Jan  1 08:00:11 1970: haveged: haveged: ver: 1.9.13; arch: generic; vend: ; build: (gcc 9.3.0 CTV); collect: 128K
+Thu Jan  1 08:00:11 1970: 
+Thu Jan  1 08:00:11 1970: haveged: haveged: cpu: (VC); data: 16K (D); inst: 16K (D); idx: 11/40; sz: 15456/64452
+Thu Jan  1 08:00:11 1970: 
+Thu Jan  1 08:00:11 1970: haveged: haveged: tot tests(BA8): A:1/1 B:1/1 continuous tests(B):  last entropy estimate 8.00247
+Thu Jan  1 08:00:11 1970: 
+Thu Jan  1 08:00:11 1970: haveged: haveged: fills: 0, generated: 0 
+Thu Jan  1 08:00:11 1970: 
+Thu Jan  1 08:00:11 1970: Starting syslogd/klogd: done
+Thu Jan  1 08:00:11 1970: enter the normal
+Thu Jan  1 08:00:11 1970: Starting sprdrild
+Thu Jan  1 08:00:11 1970: Starting mbim-daemon
+Thu Jan  1 08:00:11 1970: startmbim = 0
+Thu Jan  1 08:00:11 1970: hwclock: settimeofday: timeval: Invalid argument
+Thu Jan  1 08:00:11 1970: /etc/rc5.d/S20xl2tpd: line 23: /lib/lsb/init-functions: No such file or directory
+Thu Jan  1 08:00:11 1970: Starting watchdog daemon...ATRouter2.0 RouterNum-0.4 Completes Init 
+Thu Jan  1 08:00:11 1970: ATRouter2.0 RouterNum-0.3 Completes Init 
+Thu Jan  1 08:00:11 1970: ATRouter2.0 RouterNum-0.2 Completes Init 
+Thu Jan  1 08:00:11 1970: ATRouter2.0 RouterNum-0.1 Completes Init 
+Thu Jan  1 08:00:11 1970: ATRouter2.0 RouterNum-0.0 Completes Init 
+Thu Jan  1 08:00:11 1970: done
+Thu Jan  1 08:00:11 1970: Setting up swapspace version 1, size = 134213632 bytes
+Thu Jan  1 08:00:11 1970: Starting cp_diskserver
+Thu Jan  1 08:00:11 1970: modem property get: ro.vendor.modem.version
+Thu Jan  1 08:00:11 1970: modem property get: ro.vendor.modem.nv
+Thu Jan  1 08:00:11 1970: modem property get: ro.vendor.modem.fixnv_size
+Thu Jan  1 08:00:11 1970: modem property get: ro.vendor.modem.runnv_size
+Thu Jan  1 08:00:11 1970: modem property get: ro.vendor.modem.nvpacket_size
+Thu Jan  1 08:00:11 1970: modem property get: ro.vendor.product.partitionpath
+Thu Jan  1 08:00:11 1970: modem property get: persist.vendor.modem.nvp
+Thu Jan  1 08:00:11 1970: modem property get: persist.vendor.modem.prefix
+Thu Jan  1 08:00:11 1970: Starting slogmodem&mlogservice
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.version
+Thu Jan  1 08:00:12 1970: Starting refnotify
+Thu Jan  1 08:00:12 1970: modem property get: persist.vendor.sys.isfirstboot
+Thu Jan  1 08:00:12 1970: Starting Connection Manager
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.version
+Thu Jan  1 08:00:12 1970: modem property get: ro.bootmode
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.version
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.radio.modemtype
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.tty
+Thu Jan  1 08:00:12 1970: 
+Thu Jan  1 08:00:12 1970:  modem_ctl: Modem alive 
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.radio.modemtype
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.slogmodem.switchstate
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.diag
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.log
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.log
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.diag
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.log
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.diag
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.log
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.diag
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.log
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.diag
+Thu Jan  1 08:00:12 1970: Starting thermald
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.tty
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.v3phylog
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.nrphylog
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.wcn.log
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.gnss.log
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.modem.ag.log
+Thu Jan  1 08:00:12 1970: Starting Telephony daemon
+Thu Jan  1 08:00:12 1970: modem property get: ro.vendor.sp.log
+Thu Jan  1 08:00:12 1970: Configuring network interfaces... ifup: unknown address type "inet"
+Thu Jan  1 08:00:12 1970: Starting orca-keyevent-init
+Thu Jan  1 08:00:12 1970: enter the normal
+Thu Jan  1 08:00:12 1970: JBC {442:main()} "keyevent_deamon" 
+Thu Jan  1 08:00:12 1970: Starting start_quec_gadget_service
+Thu Jan  1 08:00:13 1970: Starting audiohalserver
+Thu Jan  1 08:00:13 1970: ql_rawdata_read_item failed
+Thu Jan  1 08:00:13 1970: JBC {466:main()} "[RG500U_EAAB]" 
+Thu Jan  1 08:00:13 1970: Starting engpc-init
+Thu Jan  1 08:00:13 1970:   [tid:2956]main...m_loglevel=0
+Thu Jan  1 08:00:14 1970: Starting OpenBSD Secure Shell server: sshd
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth0.router_solicitation_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth0.router_solicitation_max_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth1.router_solicitation_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth1.router_solicitation_max_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth2.router_solicitation_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth2.router_solicitation_max_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth3.router_solicitation_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth3.router_solicitation_max_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth4.router_solicitation_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth4.router_solicitation_max_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth5.router_solicitation_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth5.router_solicitation_max_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth6.router_solicitation_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth6.router_solicitation_max_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth7.router_solicitation_interval = 2
+Thu Jan  1 08:00:15 1970: net.ipv6.conf.sipa_eth7.router_solicitation_max_interval = 2
+Thu Jan  1 08:00:15 1970: net.core.rmem_max = 1835008
+Thu Jan  1 08:00:15 1970: net.core.rmem_default = 1835008
+Thu Jan  1 08:00:15 1970: net.core.wmem_max = 1048576
+Thu Jan  1 08:00:15 1970: net.core.wmem_default = 1048576
+Thu Jan  1 08:00:15 1970: net.ipv4.tcp_rmem = 2097152 4194304 8388608
+Thu Jan  1 08:00:15 1970: net.ipv4.tcp_wmem = 262144 524288 1048576
+Thu Jan  1 08:00:16 1970: done.
+Thu Jan  1 08:00:16 1970: Starting start_quec_nic_service
+Thu Jan  1 08:00:16 1970: Starting quectel-voice-service
+Thu Jan  1 08:00:16 1970: Starting quectel slic daemon
+Thu Jan  1 08:00:16 1970: [nic_service]Dbus conn init success.
+Thu Jan  1 08:00:16 1970: 
+Thu Jan  1 08:00:16 1970:  CEREG register state:0 
+Thu Jan  1 08:00:16 1970: 
+Thu Jan  1 08:00:16 1970:  C5GREG register state:4 
+Thu Jan  1 08:00:17 1970: Starting quectel slic daemon success
+Thu Jan  1 12:00:00 1970: Thu Jan  1 12:00:00 CST 1970
+Thu Jan  1 12:00:00 1970: Starting dm app
+Thu Jan  1 12:00:00 1970: Starting start_httpd
+Thu Jan  1 12:00:00 1970: 
+Thu Jan  1 12:00:00 1970: (connmand:2909): GLib-WARNING **: 12:00:00.284: ../glib-2.62.6/glib/giounix.c:410Error while getting flags for FD: Bad file descriptor (9)
+

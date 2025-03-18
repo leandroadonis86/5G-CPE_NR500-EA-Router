@@ -1,0 +1,3 @@
+root@udx710-module:/# uname -a
+Linux udx710-module 4.14.98 #1 SMP PREEMPT Mon Jun 24 07:46:19 UTC 2024 aarch64 GNU/Linux
+

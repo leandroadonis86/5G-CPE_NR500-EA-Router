@@ -1,0 +1,143 @@
+root@udx710-module:/run# ps
+  PID USER       VSZ STAT COMMAND
+    1 root      1916 S    init [5]
+    2 root         0 SW   [kthreadd]
+    4 root         0 IW<  [kworker/0:0H]
+    6 root         0 IW<  [mm_percpu_wq]
+    7 root         0 SW   [ksoftirqd/0]
+    8 root         0 IW   [rcu_preempt]
+    9 root         0 IW   [rcu_sched]
+   10 root         0 IW   [rcu_bh]
+   11 root         0 SW   [migration/0]
+   12 root         0 SW   [cpuhp/0]
+   13 root         0 SW   [cpuhp/1]
+   14 root         0 SW   [migration/1]
+   15 root         0 SW   [ksoftirqd/1]
+   17 root         0 IW<  [kworker/1:0H]
+   18 root         0 SW   [kdevtmpfs]
+   21 root         0 IW<  [suspend_sys_syn]
+   24 root         0 IW   [kworker/1:1]
+   42 root         0 IW   [kworker/0:1]
+  414 root         0 SW   [oom_reaper]
+  415 root         0 IW<  [writeback]
+  417 root         0 SW   [kcompactd0]
+  418 root         0 SWN  [ksmd]
+  419 root         0 IW<  [crypto]
+  421 root         0 IW<  [kblockd]
+  424 root         0 DW   [mbox-send-threa]
+  446 root         0 IW<  [devfreq_wq]
+  456 root         0 IW<  [cfg80211]
+  465 root         0 IW<  [watchdogd]
+  556 root         0 SW   [cfinteractive]
+  604 root         0 SW   [kauditd]
+  609 root         0 SW   [kswapd0]
+  674 root         0 IW<  [kworker/u5:0]
+  845 root         0 DW   [slog-0-0]
+  849 root         0 SW   [sbuf-6-5]
+  852 root         0 SW   [sbuf-6-6]
+  855 root         0 SW   [sbuf-5-4]
+  870 root         0 SW   [sbuf-5-21]
+  875 root         0 SW   [sbuf-5-6]
+  907 root         0 SW   [sbuf-5-40]
+  914 root         0 SW   [sblock-5-5]
+  917 root         0 SW   [sblock-7-5]
+  918 root         0 SW   [sblock-8-5]
+  923 root         0 SW   [sblock-1-5]
+  926 root         0 SW   [sblock-2-5]
+ 1318 root         0 IW   [kworker/0:2]
+ 1461 root         0 SW   [sbuf-6-1]
+ 1462 root         0 SW   []
+ 1518 root         0 SW   [agdsp_access]
+ 1577 root         0 SW   [spi0]
+ 1584 root         0 SW   [spi3]
+ 1586 root         0 SW   [irq/92-spi3.0]
+ 1661 root         0 IW<  [uether]
+ 1673 root         0 SW   [irq/11-24200000]
+ 1692 root         0 SW   [sprdhotplug]
+ 1716 root         0 IW<  [sipa_power_wq]
+ 1717 root         0 IW<  [sipa_rm_wq]
+ 1718 root         0 DW   [sipa-free-2]
+ 1719 root         0 DW   [sipa-free-1]
+ 1720 root         0 SW   [sipa-recv-2]
+ 1721 root         0 SW   [sipa-fill-2]
+ 1722 root         0 DW   [sipa-recv-1]
+ 1723 root         0 DW   [sipa-fill-1]
+ 1845 root         0 IW<  [dele_smsg_wq]
+ 1847 root         0 IW<  [dele_smsg_wq]
+ 1848 root         0 SW   [dele-13-5]
+ 1859 root         0 SW   [irq/96-extcon_u]
+ 1868 root         0 SW   [ttyql0]
+ 1870 root         0 SW   [ttyql1]
+ 1872 root         0 SW   [ttyql2]
+ 1874 root         0 SW   [ttyql3]
+ 1913 root         0 IW<  [ipv6_addrconf]
+ 1951 root         0 SW   [audio_sblock-1-]
+ 1954 root         0 SW   [audio_sblock-1-]
+ 2005 root         0 SW   [ubi_bgt0d]
+ 2031 root         0 IW<  [compr drain]
+ 2165 root         0 SW   [ubifs_bgt0_21]
+ 2167 root         0 SW   [ubifs_bgt0_4]
+ 2169 root         0 SW   [ubifs_bgt0_20]
+ 2420 root      442m S    /usr/bin/modem_control -l /usr/lib/libmodem_utils.so
+ 2661 root         0 IW<  [VserTestWq]
+ 2773 root     1275m S    /usr/bin/atrouter
+ 2779 messageb  3128 S    /usr/bin/dbus-daemon --system
+ 2782 root      7760 S    /usr/sbin/haveged -w 1024 -v 1
+ 2818 root      741m S    /usr/bin/sprdrild -l /usr/lib/libsprd-ril.so
+ 2854 root      1968 S    /usr/sbin/watchdog
+ 2893 root     12692 S    /usr/bin/cp_diskserver -l /usr/lib/libmodem_utils.so
+ 2895 root      2260 S    /usr/bin/mlogservice -l /usr/lib/libmodem_utils.so
+ 2896 root     38196 S    /usr/bin/slogmodem -l /usr/lib/libmodem_utils.so
+ 2898 root      146m S    /usr/bin/refnotify -l /usr/lib/libmodem_utils.so -l /usr/lib/libexpat.so
+ 2907 root     96308 S    /usr/sbin/connmand -n -d
+ 2910 root     97524 S    /usr/bin/thermald
+ 2922 root     19460 S    /usr/sbin/ofonod -nd -p rildev,ril,rilmodem,connman
+ 2937 root     15512 S    /usr/bin/keyevent-deamon
+ 2939 root      375m S    /usr/bin/quec_gadget_service
+ 2958 root      605m S    /usr/bin/audiohal
+ 2960 root     1129m S    /usr/bin/engpc
+ 3057 root      6148 S    sshd: /usr/sbin/sshd -f /etc/ssh/sshd_config_readonly [listener] 0 of 10-100 startups
+ 3059 root      376m S    /usr/bin/quec_nic_service
+ 3090 root      535m S    /usr/bin/quectel_slic_daemon 3 5
+ 3096 root      231m S    /usr/bin/dm_app
+ 3119 root      231m S    /usr/bin/jhttpd --home /tmp
+ 3137 root     15536 S    /usr/bin/quec_app_monitor
+ 3138 root      3296 S    {start_getty} /bin/sh /bin/start_getty 115200 ttyS0 vt102
+ 3139 root      3168 S    /sbin/getty 38400 tty1
+ 3161 root      3168 S    /sbin/getty -L 115200 ttyS0 vt102
+ 3220 root      3168 S    /sbin/syslogd -n -R 192.168.188.103:5140 -D -l 8
+ 3223 root      3168 S    /sbin/klogd -n
+ 3239 root      8580 S    nginx: master process nginx
+ 3240 www       8916 S    nginx: worker process
+ 3344 root         0 IW<  [kworker/0:1H]
+ 3345 root         0 IW<  [kworker/1:1H]
+ 3395 root         0 SW   [irq/99-dwc3]
+ 3535 root         0 IW<  [msm_ipc_router]
+ 3538 root         0 IW<  [MHI_XPRT14:15]
+ 3541 root         0 IW<  [qmi_svc_event_w]
+ 3542 root         0 IW<  [diag_mhi_MDM]
+ 3545 root         0 IW<  [cds_recovery_wo]
+ 3546 root         0 SW   [wlan_logging_th]
+ 3549 root         0 IW   [kworker/1:2]
+ 3551 root         0 IW<  [IPCRTR_MHI14:15]
+ 3553 root         0 IW<  [qmi_hndl0000000]
+ 3556 root         0 SW<  [scheduler_threa]
+ 3557 root         0 SW<  [cds_ol_rx_threa]
+ 3558 root         0 RW<  [dp_rx_thread_0]
+ 3559 root         0 SW<  [dp_rx_thread_1]
+ 3560 root         0 SW<  [dp_rx_thread_2]
+ 3561 root         0 SW<  [dp_rx_thread_3]
+ 3607 root      6804 S    hostapd -B /tmp/etc/hostapd-wlan0.conf -P /var/run/hostapd_ssid0.pid
+ 3634 root      2092 S    /usr/bin/syswatchdog
+ 3637 root      2672 S    /usr/bin/JBoneOSAgent 23
+ 3647 root     15396 S    /usr/bin/discovery_service
+19345 root         0 IW   [kworker/u4:0]
+19830 root         0 IW   [kworker/u4:2]
+20213 root      2852 S    /usr/bin/netchk
+20235 root      3416 S    {ril-init} /bin/sh /etc/init.d/ril-init restart
+20236 root      221m S    /usr/bin/rild
+20334 root         0 IW   [kworker/u4:1]
+20494 root      3268 R    ps
+29489 root      6280 R    sshd: root@pts/0
+29507 root      3664 S    -sh
+

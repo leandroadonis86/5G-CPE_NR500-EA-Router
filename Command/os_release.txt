@@ -1,0 +1,7 @@
+user@udx710-module:/proc/self/root/etc$ echo "$(<os-release)"
+ID=unisoc-initgc
+NAME="unisoc-initgc-distro"
+VERSION="udx710-module+unisoc-initgc-1.0+W24.26.1:16.43.31+user+native (sumo)"
+VERSION_ID=udx710-module-unisoc-initgc-1.0-w24.26.1:16.43.31-user-native
+PRETTY_NAME="unisoc-initgc-distro udx710-module+unisoc-initgc-1.0+W24.26.1:16.43.31+user+native (sumo)"
+DISTRO_CODENAME="sumo"

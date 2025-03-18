@@ -1,0 +1,21 @@
+user@udx710-module:/proc$ echo "$(<cpuinfo)"
+processor	: 0
+BogoMIPS	: 52.00
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd05
+CPU revision	: 0
+
+processor	: 1
+BogoMIPS	: 52.00
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd05
+CPU revision	: 0
+
+Hardware	: Unisoc UDX710
+Serial		: 0732f5cf7079c5ff86c8e1a310ea16d521354ad59f8d1a941bdd3664731ba5b6
