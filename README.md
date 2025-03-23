@@ -7,6 +7,12 @@ Fix, Debug, Access, Tools, Tests and more functionalities for this router.
 + OS release, unisoc-initgc-distro udx710-module+unisoc-initgc-1.0+W24.26.1:16.43.31+user+native (sumo)
 + JBC version, v3.4.2731.16.43
 + Quectel SDK version, quectel_RXX00U_sdk_03.001S09
+
+or
+
++ SW, RG500UEAABxCOMSLICv3.2.2543.12.18
++ OS release, unisoc-initgc-distro udx710-module+unisoc-initgc-1.0+W23.51.2:12.18.47+user+native (sumo)
++ JBC version, v3.2.2543.12.18
 ```
 ,-------------------------------------------------------------,
 | RG500UEAABxCOMSLICv3.4.2731.16.43                           |
