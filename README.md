@@ -82,9 +82,12 @@ https://github.com/advisories/GHSA-m584-rmpj-6q5p
 Keeps rebooting and you don't why? 
 Check "Vulnerability" section 1st.
 
+Internet keeps losing connection and is not signal?
+Check if SIM card option on Router webpage is locked to the inserted SIM port.
+
 #### No Wifi? 
 
-Probablity pcie bug or wifi faulty. Have a look on `dmesg` on your device.
+Probablity pcie bug or wifi faulty, internal driver malfuction. Have a look on `dmesg` on your device.
 
 Any of this errors on the list? 
 ```
@@ -103,14 +106,28 @@ Any device on `lspci` in your router device?
 
 #### No Ethernet?
 
-... reset
+1. Enable "USB Device" option switch on "Engineering Setting" tab will disable Ethernet by default.
+2. Sometimes needs physical Reset button to be pressed to get it work.
+
+...
 
 ### Software
 
 - No 5g internet?
+
+1. Sim card not compactible.
+2. No 5G signal. Check using AT command for ex. `AT+QENG=“servingcell”`
+3. Operator service not allowing.
+4. Use manual AT command to setup your specific network.
+
 ...
 
 - No USB device?
+
+1. Check device drivers for your current system.
+2. Enter the Router webpage as root and enable "USB Device" option switch on "Engineering Setting".
+3. Make sure using the proper mode on `AT+QCFG:“usbnet”` for your current system. Windows: 3. RNDIS mode, Linux: 5. NCM mode.
+
 ...
 
 ## Access
