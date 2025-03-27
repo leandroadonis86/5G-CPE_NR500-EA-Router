@@ -44,7 +44,7 @@ The code and scripts provided herein are for educational purposes only. By using
 
 By proceeding to use this code, you accept and agree to this disclaimer in its entirety.
 
-I'm here able to help as far my skills can go. If you need any information or help just create a "Issue" refering this project with label "Help wanted". I might have more information updated particulary focus in your issue than this general topics readme text.
+If you need any information or help just create a "Issue" refering this project with label "Help wanted". I might have more information updated particulary focus in your issue than this general topics readme text.
 
 ## Router
 
