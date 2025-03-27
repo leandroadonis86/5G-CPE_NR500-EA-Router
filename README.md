@@ -81,7 +81,7 @@ https://github.com/advisories/GHSA-m584-rmpj-6q5p
 
 Device keeps rebooting or sets to default manufacture configuration and you don't know why?
 
-- 1st this device does not reboot or change configuration by himself.
+- 1st this device does not reboot or change configuration by itself, someone did it.
 - Check "Vulnerability" to see the cause.
 - Block all external unkwon access to the router access with `iptables`.
 
