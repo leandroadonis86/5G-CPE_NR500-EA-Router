@@ -131,7 +131,7 @@ No 5g internet?
 No USB device?
 
 1. Check device drivers for your current system.
-2. Enter the Router webpage as root and enable "USB Device" option switch on "Engineering Setting".
+2. Enter the Router webpage as root and enable "USB Device" option switch at "Engineering Setting".
 3. Make sure using the proper mode on `AT+QCFG:“usbnet”` for your current system. Windows: 3. RNDIS mode, Linux: 5. NCM mode.
 
 ...
