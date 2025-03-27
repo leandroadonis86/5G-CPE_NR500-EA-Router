@@ -44,6 +44,8 @@ The code and scripts provided herein are for educational purposes only. By using
 
 By proceeding to use this code, you accept and agree to this disclaimer in its entirety.
 
+I'm here able to help as far my skills can go. If you need any information or help just create a "Issue" refering this project with label "Help wanted". I might have more information updated particulary focus in your issue than this general topics readme text.
+
 ## Router
 
 The software contains an operative system based on linux (Yocto) [https://github.com/96boards/oe-rpb-manifest] distributed by Unisoc with some controllers that can be adapted from OpenWRT or (CodeLinaro) [https://git.codelinaro.org/explore/] projects. This presented system can be seen from other similar routers such as those being distributed by Airtel and Unicom operators. For development modules Qualcomm SDK and OpenQuectel base code may be used. There are other drivers that need to be directly embedded into the system such as the AX88179A Gigabit Ethernet, Spreadtrum SC2730 or Qualcomm QCA6390 wifi. It has a customized integrated JBC system, JBoneOS from JBoneOS Cloud Technologies that limits access restrictions to internal commands or services, supervise and make stats of the entire ordering system. Some binary files were customized to work together with JBC, for ex. Jhttpd, Adbd, Telnet.
