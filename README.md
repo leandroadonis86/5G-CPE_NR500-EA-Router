@@ -79,13 +79,16 @@ https://github.com/advisories/GHSA-m584-rmpj-6q5p
 
 ### Hardware
 
-Keeps rebooting and you don't why? 
+Device keeps rebooting or get to default manufacture configuration and you don't know why?
 
-- Check "Vulnerability" section 1st.
+- 1st this device does not reboot or change configuration by himself.
+- Check "Vulnerability" to see the cause.
+- Block all external unkwon access to the router access with `iptables`.
 
 Internet keeps losing connection and is not antenna signal?
 
-- Check if SIM card option on Router webpage is locked to the inserted SIM port.
+- Check if SIM card option in Router webpage is locked to the inserted SIM port.
+- Use manual settings and lock to the best Antenna and Band in Router webpage.
 
 
 #### No Wifi? 
