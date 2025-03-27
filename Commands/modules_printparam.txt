@@ -1,0 +1,52 @@
+:: https://serverfault.com/questions/62316/how-do-i-list-loaded-linux-module-parameter-values
+:: script by RaSca on serverfault.com
+
+cat /proc/modules | cut -f 1 -d " " | while read module; do \
+ echo "Module: $module"; \
+ if [ -d "/sys/module/$module/parameters" ]; then \
+  ls /sys/module/$module/parameters/ | while read parameter; do \
+   echo -n "Parameter: $parameter --> "; \
+   cat /sys/module/$module/parameters/$parameter; \
+  done; \
+ fi; \
+ echo; \
+done
+
+::
+
+
+Module: wlan
+Parameter: con_mode --> 0
+Parameter: con_mode_ftm --> 0
+Parameter: country_code --> CN
+Parameter: enable_11d --> -1
+Parameter: enable_dfs_chan_scan --> -1
+Parameter: fwpath --> 
+Parameter: pcie_gen_speed --> 0
+Parameter: prealloc_disabled --> 1
+Parameter: qdf_log_dump_at_kernel_enable --> Y
+Parameter: qdf_log_flush_timer_period --> 0
+Parameter: timer_multiplier --> 1
+Module: wlan_cnss_core_pcie
+Parameter: bd_file_type --> 1
+Parameter: bdf_bypass --> N
+Parameter: daemon_support --> N
+Parameter: debug_mask --> 0
+Parameter: debug_mask_mhi_xprt --> 0
+Parameter: enable_waltest --> N
+Parameter: fbc_bypass --> N
+Parameter: mhi_ipc_log_lvl --> 32
+Parameter: mhi_msg_lvl --> 32
+Parameter: pci_link_down_panic --> 0-
+Parameter: qmi_bypass --> N
+Parameter: qmi_timeout --> 10000
+Parameter: quirks --> 0
+Parameter: rddm_panic --> Y
+Parameter: rddm_support --> N
+Parameter: wlan_en_gpio_num --> -1
+
+Module: ax88179_178a
+
+Module: mii
+
+Module: gpio_wdt_jbc
