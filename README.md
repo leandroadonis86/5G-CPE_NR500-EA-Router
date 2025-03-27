@@ -81,11 +81,11 @@ https://github.com/advisories/GHSA-m584-rmpj-6q5p
 
 Keeps rebooting and you don't why? 
 
-Check "Vulnerability" section 1st.
+- Check "Vulnerability" section 1st.
 
-Internet keeps losing connection and is not signal?
+Internet keeps losing connection and is not antenna signal?
 
-Check if SIM card option on Router webpage is locked to the inserted SIM port.
+- Check if SIM card option on Router webpage is locked to the inserted SIM port.
 
 #### No Wifi? 
 
