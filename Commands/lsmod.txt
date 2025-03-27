@@ -1,0 +1,7 @@
+root@udx710-module:/# lsmod
+Module                  Size  Used by
+wlan                 5099520  0
+wlan_cnss_core_pcie   278528  1 wlan
+ax88179_178a           53248  0
+mii                    16384  1 ax88179_178a
+gpio_wdt_jbc           12288  1
