@@ -87,9 +87,10 @@ Internet keeps losing connection and is not antenna signal?
 
 - Check if SIM card option on Router webpage is locked to the inserted SIM port.
 
+
 #### No Wifi? 
 
-Probablity pcie bug or wifi faulty, internal driver malfuction. Have a look on `dmesg` of your device.
+- Probablity pcie bug or wifi faulty, internal driver malfuction. Have a look on `dmesg` of your device.
 
 Any of this errors on the list? 
 ```
@@ -115,7 +116,7 @@ Any device on `lspci` in your router device?
 
 ### Software
 
-- No 5g internet?
+No 5g internet?
 
 1. Sim card not compactible.
 2. No 5G signal. Check using AT command for ex. `AT+QENG=“servingcell”`
@@ -124,7 +125,7 @@ Any device on `lspci` in your router device?
 
 ...
 
-- No USB device?
+No USB device?
 
 1. Check device drivers for your current system.
 2. Enter the Router webpage as root and enable "USB Device" option switch on "Engineering Setting".
