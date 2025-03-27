@@ -80,14 +80,16 @@ https://github.com/advisories/GHSA-m584-rmpj-6q5p
 ### Hardware
 
 Keeps rebooting and you don't why? 
+
 Check "Vulnerability" section 1st.
 
 Internet keeps losing connection and is not signal?
+
 Check if SIM card option on Router webpage is locked to the inserted SIM port.
 
 #### No Wifi? 
 
-Probablity pcie bug or wifi faulty, internal driver malfuction. Have a look on `dmesg` on your device.
+Probablity pcie bug or wifi faulty, internal driver malfuction. Have a look on `dmesg` of your device.
 
 Any of this errors on the list? 
 ```
