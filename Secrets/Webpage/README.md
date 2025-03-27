@@ -54,10 +54,8 @@ Assuming your device ip address is `192.168.188.1` as default...
 
 ## Form elements 
 [http://192.168.188.1/home.asp#page/jbc-24g-adv](http://192.168.188.1/home.asp#page/jbc-24g-adv)
-
-## Form elements 
 [http://192.168.188.1/home.asp#page/jbc-58g-adv](http://192.168.188.1/home.asp#page/jbc-58g-adv)
-![form elements](https://github.com/leandroadonis86/5G-CPE_NR500-EA-Router/blob/main/Secrets/Webpage/form_elements_jbc-24g-adv-jbc-58g-adv.png)
+![form elements](https://github.com/leandroadonis86/5G-CPE_NR500-EA-Router/blob/main/Secrets/Webpage/form_elements_jbc-24g-adv_jbc-58g-adv.png)
 
 
 ## Internet Backup 
