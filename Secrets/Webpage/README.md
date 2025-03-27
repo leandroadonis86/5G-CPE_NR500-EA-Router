@@ -7,7 +7,7 @@ There are many sub-webpage varients I will leave a list of the hidden ones down 
 
 There are other few working .asp webpages that may damage device with wrong use.
 
-In this router it is possible to make visible hidden debug menus with an builtin account "root" added by manufactorer such as "Engineering Setting" menu. This account unfortually is available in all devices and the password can only be changed by modifying the jbc_settings.ini file with root access in shell.
+In this router it is possible to make visible hidden debug menus with an builtin account "root" added by manufacturer such as "Engineering Setting" menu. This account unfortually is available in all devices and the password can only be changed by modifying the jbc_settings.ini file with root access in shell.
 
 ![login as root](https://github.com/leandroadonis86/5G-CPE_NR500-EA-Router/blob/main/Secrets/Webpage/login_asroot.png)
 
