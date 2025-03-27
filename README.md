@@ -112,7 +112,7 @@ Any device on `lspci` in your router device?
 
 #### No Ethernet?
 
-1. Enable "USB Device" option switch on "Engineering Setting" tab will disable Ethernet by default.
+1. Enable "USB Device" option switch at "Engineering Setting" tab will disable Ethernet by default.
 2. Sometimes needs physical Reset button to be pressed to get it work.
 
 ...
@@ -172,7 +172,7 @@ JBoneOS >
 > it's necessary to execute `AT+QCFG:“usbnet”` At command and select the mode for operative system you use to recognize device via USB. Default configuration is for windows, device describe as `VID:0x2C7C PID:0x0900`.
 
 On SSH session anyone is able to print file content and inspect throw directories. 
-- For vieweing directory contents type: `cd` and press `tab` `tab`. 
+- For vieweing directory contents type: `cd` press `[space]` and press `[tab]` `[tab]`. 
 - For printing content file as ASCII use: `printf "%b\n" "$(<testfile)"`
 
 For the admin access on SSH session it's able to use tools like:
