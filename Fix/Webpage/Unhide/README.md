@@ -1,8 +1,8 @@
 # Unhide Menus
 
-New home.asp file is a modified version from the original home.bak allowing new menus in the Router webpage although some sub-pages might be unfunctional yet.
+New `home.asp` file is a modified version from the original `home.bak` allowing new menus in the Router webpage although some sub-pages might be unfunctional yet.
 
-New home.asp allow:
+New `home.asp` allow:
 + jbc-clientlist
 + jbc-misc
 + jbc-mwan
