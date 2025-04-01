@@ -180,9 +180,13 @@ On SSH session anyone is able to print file content and inspect throw directorie
 For the admin access on SSH session it's able to use tools like:
 - `vi` for editing and create files
 - `hexdump` to print file content as binary, hex format
+  
   Prefered: `hexdump -vC file`
+
 - `tftp` transfer files to a server
+  
   PC host as server: `sudo apt-get install tftpd-hpa`
+  
   Router: `tftp -g -r getfile.txt 192.168.188.2` or `tftp -p -l putfile.txt 192.168.188.2`
 
   
