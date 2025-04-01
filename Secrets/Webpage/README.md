@@ -16,11 +16,10 @@ Assuming your device ip address is `192.168.188.1` as default...
 
 ## Engineering Setting 
 On version v3.4.2731.16.43 there are one more switch "Wifi debug Switch" compared with older v3.2 that include "Debug Switch" and "USB device". 
-"USB device" option allow router to be accessed by 4 COM Ports in the system acting like a regular direct modem and simultaneously It will disable the Ethernet access.
 
 Wifi debug Switch: allow to see more messages about wlan in dmesg, this will also disable Wifi if switch on.
 
-USB device Switch: allow to use router as a modem direct connect to a PC host.
+USB device Switch: allow to use router as a modem direct connect to a PC host. It will disable Ethernet if switch on.
 
 [http://192.168.188.1/home.asp#page/jbc-debug](http://192.168.188.1/home.asp#page/jbc-debug)
 
