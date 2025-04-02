@@ -15,8 +15,14 @@ New `home.asp` allow:
 + jbc-data_setting
 + jbc-debug
 
+New `jbc_misc.html` file is a modified version from original `jbc-misc.bak` allowing to show IMEI textbox and set TLL in the Misc Settings menu. IMEI set still unfunctional for the moment.
+
 ## Install
 
 Replace the original file in the router `/www/home.asp` with the modified `home.asp`.
+Replace the original file in the router `/www/jbc-misc.html` with the modified `jbc-misc.html`
+
+
+All `.bak` files are the original from the router just rename it with the right extention for rollback. 
 
 ...
