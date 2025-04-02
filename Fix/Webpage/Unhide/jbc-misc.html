@@ -1,0 +1,392 @@
+
+<link rel="stylesheet" href="../../assets/css/jquery-ui.custom.min.css" />
+<link rel="stylesheet" href="../../assets/css/jquery-ui.min.css" />
+<link rel="stylesheet" href="../../assets/css/chosen.css" />
+
+<!-- ajax layout which only needs content area -->
+<div class="page-header">
+	<h1>
+		<lable class="i18n" name="misc_header_title"></lable>
+		<small>
+			<i class="ace-icon fa fa-angle-double-right"></i>
+			<lable class="i18n" name="misc_header_note"></lable>
+		</small>
+	</h1>
+</div><!-- /.page-header -->
+
+<!-- ajax layout which only needs content area -->
+<div class="space"></div>
+<div class="row">
+	<div class="col-xs-12">
+		<!-- PAGE CONTENT BEGINS -->
+
+		<form class="form-horizontal show_imei_div" role="form">
+			<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="id_input_imei">IMEI</label>
+				<div class="col-md-2">
+					<input type="text" id="id_input_imei" placeholder="" class="center form-control input_text" />
+				</div>
+				<div class="clearfix col-md-1">
+					<button id="id_set_imei" type="button" class="btn btn-info btn-sm btn-round">
+						<i class="ace-icon fa fa-check bigger-110"></i>
+						<span class="i18n" name="common_confirm">确认</span>
+					</button>
+				</div>
+			</div>
+
+			<div class="space-4"></div>
+		</form>
+
+		<form class="form-horizontal show_ttl_div" role="form">
+			<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="id_input_ttl">TTL</label>
+				<div class="col-md-1">
+					<input type="text" id="id_input_ttl" placeholder="" class="center form-control input_text" />
+				</div>
+				<div class="clearfix col-md-1">
+					<button id="id_set_ttl" type="button" class="btn btn-info btn-sm btn-round">
+						<i class="ace-icon fa fa-check bigger-110"></i>
+						<span class="i18n" name="common_confirm">确认</span>
+					</button>
+				</div>
+			</div>
+
+			<div class="space-4"></div>
+		</form>
+
+		<div class="space-6"></div>
+
+		<div class="well">
+			<h4 class="green smaller lighter i18n" name="note_h4">Note:</h4>
+			<span class="i18n" name="misc_note"></span>
+		</div>
+		<!-- PAGE CONTENT ENDS -->
+	</div><!-- /.col -->
+</div><!-- /.row -->
+
+<!-- page specific plugin scripts -->
+
+<script type="text/javascript">
+	var scripts = [null,
+		"../../assets/js/jquery-ui.min.js",
+		"../../assets/js/jquery-ui.custom.min.js",
+		"../../assets/js/bootstrap.min.js",
+		"../../assets/js/bootstrap-tag.min.js",
+		"../../assets/js/bootbox.all.min.js",
+		"../../assets/js/chosen.jquery.min.js",
+		null]
+
+	var ___data = {};
+
+	var _loading_rebooting=""
+	var _loading_rebooted=""
+
+	var input_imei_obj = $("#id_input_imei");
+	var input_ttl_obj = $("#id_input_ttl");
+
+	var imei_div_obj = $(".show_imei_div");
+	var ttl_div_obj = $(".show_ttl_div");
+
+	//判断这个imei是否是正确的 正确返回ture 错误返回false
+	function isImei(imei) {
+		let i = 0;
+		let vl_Sum1 = 0, vl_Sum2 = 0, vl_Total = 0;
+		let vl_Temp = 0;
+
+		imei=trim(imei);
+
+		if(imei==null)return false;
+		if (imei.length!=15) return false;
+		if (!checkNumber(imei)) return false;
+
+		for (i = 0; i < 14; i++) {
+			/*(1)将奇数位数字相加(从1开始计数)*/
+			if ((i % 2) == 0) {
+				vl_Sum1 = vl_Sum1 + parseInt(imei[i]);
+			} else {
+				/*(2)将偶数位数字分别乘以2,分别计算个位数和十位数之和(从1开始计数)*/
+				vl_Temp = (parseInt(imei[i])) * 2;
+				if (vl_Temp < 10) {
+					vl_Sum2 = vl_Sum2 + vl_Temp;
+				} else {
+					vl_Sum2 = vl_Sum2 + 1 + vl_Temp - 10;
+				}
+			}
+		}
+
+		/*(1)+(2)*/
+		vl_Total = vl_Sum1 + vl_Sum2;
+		/*如果得出的数个位是0则校验位为0,否则为10减去个位数 */
+		if ((vl_Total % 10) == 0) {
+			if(imei[14] == '0'){
+				return true;
+			}
+		} else {
+			if((10 - (vl_Total % 10)).toString() == imei[14] ){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	function init_data() {
+		/*
+		imei_div_obj.addClass("hide");
+		ttl_div_obj.addClass("hide");
+		*/
+
+		show_loadingv3();
+
+		$.ajax({
+			url: ___url,
+			type: 'POST',
+			contentType: 'application/json',
+			dataType : 'json',
+			data: JSON.stringify({action: "misc_info"}),
+			success: function (e) {
+				// console.info(`debug_info: ${JSON.stringify(e)}`);
+				var data = e.data
+				if(e.status===0) {
+					if (!(typeof(data.imei)==="undefined")) {
+						input_imei_obj.val(data.imei);
+						imei_div_obj.removeClass("hide");
+					}
+
+					if (!(typeof(data.ttl)==="undefined")) {
+						input_ttl_obj.val(data.ttl);
+						ttl_div_obj.removeClass("hide");
+					}
+
+					refresh_select()
+				}
+			},
+			fail: function () {
+				console.info("debug_info fail");
+			},
+			complete: function () {
+				hide_loadingv3()
+				console.info("debug_info complete");
+			}
+		});
+	}
+	function check_value_imei() {
+		input_imei_obj.parent().parent().removeClass("has-error")
+		{
+			var _imei = input_imei_obj.val();
+			if (!isImei(_imei)) {
+				bootbox.alert($.i18n.prop("imei_is_invalid"), function () {
+					input_imei_obj.parent().parent().addClass("has-error")
+				});
+				return false
+			}
+		}
+
+		return true;
+	}
+
+	function check_value_ttl() {
+		input_ttl_obj.parent().parent().removeClass("has-error")
+		{
+			var _ttl = input_ttl_obj.val();
+			var __ttl = parseInt(_ttl);
+
+			if (__ttl>255){
+				bootbox.alert($.i18n.prop("ttl_is_invalid"), function(){
+					input_ttl_obj.parent().parent().addClass("has-error")
+				});
+				return false
+			}
+		}
+
+		return true;
+	}
+
+	ace.load_ajax_scripts(scripts, function() {
+		//inline scripts related to this page
+		jQuery(function($) {
+
+			init_language()
+
+			$('#id_set_ttl').on('click', function() {
+
+				if(!check_value_ttl()) {
+					return
+				}
+
+				bootbox.confirm({
+					title: $.i18n.prop("common_confirm"),
+					message: $.i18n.prop("common_confirm_msg"),
+					buttons: {
+						cancel: {
+							className: 'btn-sm btn-round',
+							label: '<i class="fa fa-times"></i>' + $.i18n.prop("bootbox_cancel")
+						},
+						confirm: {
+							className: 'btn-sm btn-primary btn-round',
+							label: '<i class="fa fa-check"></i>' + $.i18n.prop("bootbox_confirm")
+						}
+					},
+					callback: function (result) {
+						if(result) {
+
+							show_loadingv2($(".main-container"), ___loading_title);
+
+							var v = input_ttl_obj.val()
+
+							$.ajax({
+								url: ___url,
+								type: 'POST',
+								contentType: 'application/json',
+								dataType : 'json',
+								data: JSON.stringify({action: "set_ttl",data: { "ttl": parseInt(v) }}),
+								success: function (data) {
+									hide_loadingv2($(".main-container"));
+
+									if (data.status===0) {
+										console.info("set_ttl success");
+
+										bootbox.alert($.i18n.prop("submit_success"), function(){
+											location.reload();
+										})
+									} else {
+										console.info("set_ttl no success");
+									}
+								},
+								fail: function () {
+								},
+								complete: function () {
+									hide_loadingv2($(".main-container"))
+								}
+							});
+						}
+					}
+				});
+			});
+
+			$('#id_set_imei').on('click', function() {
+
+				if(!check_value_imei()) {
+					return
+				}
+
+				bootbox.confirm({
+					title: $.i18n.prop("common_confirm"),
+					message: $.i18n.prop("common_confirm_msg"),
+					buttons: {
+						cancel: {
+							className: 'btn-sm btn-round',
+							label: '<i class="fa fa-times"></i>' + $.i18n.prop("bootbox_cancel")
+						},
+						confirm: {
+							className: 'btn-sm btn-primary btn-round',
+							label: '<i class="fa fa-check"></i>' + $.i18n.prop("bootbox_confirm")
+						}
+					},
+					callback: function (result) {
+						if(result) {
+
+							show_loadingv2($(".main-container"), ___loading_title);
+
+							var v = input_imei_obj.val()
+
+							$.ajax({
+								url: ___url,
+								type: 'POST',
+								contentType: 'application/json',
+								dataType : 'json',
+								data: JSON.stringify({action: "set_imei",data: { "imei": v }}),
+								success: function (data) {
+									hide_loadingv2($(".main-container"));
+
+									if (data.status===0) {
+										console.info("set_imei success");
+										bootbox.alert($.i18n.prop("submit_success"), function(){
+											location.reload();
+										})
+									} else {
+										console.info("set_imei no success");
+									}
+								},
+								fail: function () {
+								},
+								complete: function () {
+									hide_loadingv2($(".main-container"))
+								}
+							});
+						}
+					}
+				});
+			});
+
+			init_data();
+
+		});
+
+	});
+
+	function init_language() {
+		/*执行I18n翻译*/
+		execI18n();
+
+		_loading_rebooting = $.i18n.prop("devicemgr_loading_rebooting") // "正在重启中，请稍候。。。"
+		_loading_rebooted = $.i18n.prop("devicemgr_loading_rebooted") // "重启完成！请重新刷新页面。"
+		___loading_title = $.i18n.prop("default_loading_title");
+	}
+
+	function screen_info() {
+		var info = window.screen.width + " x " + window.screen.height;
+		bootbox.alert(info, function(){
+			console.log(info)
+		});
+
+	}
+</script>
+
+<style>
+	.form-group {
+		margin-bottom: 5px;
+	}
+	.btn-sm {
+		line-height: 0.39 !important;
+	}
+	.progress-bar {
+		background-color: #ed1d23;
+		height: 45px;
+	}
+
+	.modal-dialog {
+		top: 35%
+	}
+
+	.ui-progressbar {
+		height: 45px;
+		position: relative;
+	}
+
+	.progress {
+		height: 45px;
+		margin-bottom: 0px;
+	}
+
+	.progress-label {
+		position: absolute;
+		top: 4px;
+		width: 100%;
+		color: #009ceb;
+		font-size: 23px;
+	}
+
+	.define-tooltip-inner{
+		background: #cc2b0d !important;
+		color: #000 !important;
+	}
+
+	.tooltip-inner{
+		background-color: #0e8ee7;
+
+	}
+
+	.tooltip.top .tooltip-arrow{
+		border-top-color: #0e8ee7;
+	}
+</style>
