@@ -31,7 +31,8 @@ In this router the config file has name `jbc_settings.ini`.
    |         jbc_settings.ini          |
    |   - Build JSON response           |
    |   - Execute Scripts & Files       |
-   +-----------------------------------+```
+   +-----------------------------------+
+```
 
 
 ...
