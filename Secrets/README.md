@@ -1,4 +1,4 @@
-# Website
+# Router's webpage
 
 The following example show how the request is made via the router's webpage. When the user submit a form, one Ajax Request is created to `/goform/formJsonAjaxReq` throw `jbc/abc.js` javascript. 
 The name of the action is also included in JSON object. The verified input will be channeled to Jhttp to be interpreted as a read\write configuration or execute a file\script inside the system.
