@@ -65,6 +65,8 @@ The hardware interface on PCB version NR500-WIFI6-V2.0 dated 2023/10/18 is compo
 - Macronix KH25L1606E FlashRom, of 16Mb 64K each block,
 - Globaltech_DS_GS339 Voltage comparator, indicate the battery level on front leds.
 
+RG500U-EA include one SPREADTRUM chip UDX710 with Dual-core ARM Cortex-A55 processor Core Embedded, up to 1.35GH. Recommended toolchain use ARMv8.2-A 64bit (aarch64) for UNISOC SC9863A.
+
 #### On the back, 
 - chip 8-pin 12v to 5v voltage regulator, for 7.4v Li-on batery,
 - ASIX AX88179 Gigabit Ethernet Controller, for USB 3.0.
