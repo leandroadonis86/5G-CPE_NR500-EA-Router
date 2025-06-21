@@ -169,13 +169,13 @@ JBoneOS > help
 JBoneOS >
 ``` 
 - Router `http:\\` webpage with a root access providing more options like debug mode switch for wifi, debug on switch, usb switch mode. There is an "AT Command" webpage available to anyone also referend in "Issues". 
-- It's also possible to send "AT Command" throw SSH using `echo "AT" > /dev/smd1` but before it's necessary to `cat /dev/smd1` to see the full output while sending commands in a different window.
-- Adbd service file is present on this router but is not possible to turn it on just using the AT command `AT+QCFG` because it's unavaible by default and it will bring settings back. Different from other firmware versions that was possible to switch abd on with a session token and was already configured in the system. I've looked and debuged the adbd service file, similar code to one available in CodeLinaro but it was customized by JBC when it was compiled, able to remove the `disable by jbc` and run the service althought it's unable to find any device to connect throw the listen 5555 port, `netstat` did not show any open 5555 port either, still on WIP. 
-- There is accessible UART on PCB for 1.8v with few available boot options and if device drivers are installed it's possible to connect on 4 COM ports for specific use or directly as a RNDIS modem.
+- It's also possible to send "AT Command" over SSH using `echo "AT" > /dev/smd1` but before it's necessary to `cat /dev/smd1` to see the full output while sending commands in a different window.
+- Adbd service file is present on this router but is not possible to turn it on just using the AT command `AT+QCFG` because it's unavaible by default and it will bring settings back. Different from other firmware versions that was possible to switch abd on with a session token and was already configured in the system. I've looked and debuged the adbd service file, similar code to one available in CodeLinaro but it was customized by JBC when it was compiled, able to remove the `disable by jbc` and run the service althought it's unable to find any device to connect over the listen 5555 port, `netstat` did not show any open 5555 port either, still on WIP. 
+- There is accessible UART on PCB for 1.8v with few available boot options and if device drivers are installed it's possible to connect on 4 COM ports for specific use and 1 Modem device for directly as a RNDIS modem.
 > [!NOTE]
 > it's necessary to execute `AT+QCFG:“usbnet”` At command and select the mode for operative system you use to recognize device via USB. Default configuration is for windows, device describe as `VID:0x2C7C PID:0x0900`.
 
-On SSH session anyone is able to print file content and inspect throw directories. 
+On SSH session anyone is able to print file content and inspect inside of directories. 
 - For vieweing directory contents type: `cd` press `[space]` and press `[tab]` `[tab]`. 
 - For printing content file as ASCII use: `printf "%b\n" "$(<testfile)"`
 
@@ -216,7 +216,7 @@ Example 2 POST:
 ```
 
 
-The Good News is iptables, it's available and running. Admin can block any access permanently to local or internet with specified rule.
+The Good News is iptables, it's available and running. Admin can block any access permanently to local or internet with specified rule over shell.
 
 ## Tools
 ### Hardware
