@@ -219,20 +219,20 @@ Example 2 POST:
 The Good News is iptables, it's available and running. Admin can block any access permanently to local or internet with specified rule over shell.
 
 ## Tools
-### Hardware
+- ### Hardware
 USB-C to USB-C Data cable (not for charge use)
 
 #### Device: 
 CH341A MinProgrammer
 
-### Software
+- ### Software
 #### Linux: 
 GHidra v.11.3, Postman v.11.35, Flashroom v.1.5.0, Binwalk v.2.2.0, Pacextractor, Jefferson
 
 #### Windows: 
 QCOM v.1.8, SPD Download R.27, Platform ADB
 
-### Extra
+- ### Extra
 #### Scripting: ...
 
 
