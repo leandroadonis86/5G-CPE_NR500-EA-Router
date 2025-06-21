@@ -221,14 +221,17 @@ The Good News is iptables, it's available and running. Admin can block any acces
 ## Tools
 ### Hardware
 USB-C to USB-C Data cable (not for charge use)
-Device: CH341A MinProgrammer
+
+#### Device: CH341A MinProgrammer
 
 ### Software
-Linux: GHidra v.11.3, Postman v.11.35, Flashroom v.1.5.0, Binwalk v.2.2.0, Pacextractor, Jefferson
+#### Linux: 
+GHidra v.11.3, Postman v.11.35, Flashroom v.1.5.0, Binwalk v.2.2.0, Pacextractor, Jefferson
 
-Windows: QCOM v.1.8, SPD Download R.27, Platform ADB
+#### Windows: 
+QCOM v.1.8, SPD Download R.27, Platform ADB
 
 ### Extra
-Scripting: ...
+#### Scripting: ...
 
 
