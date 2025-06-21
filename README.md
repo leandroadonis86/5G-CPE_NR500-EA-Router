@@ -222,7 +222,8 @@ The Good News is iptables, it's available and running. Admin can block any acces
 ### Hardware
 USB-C to USB-C Data cable (not for charge use)
 
-#### Device: CH341A MinProgrammer
+#### Device: 
+CH341A MinProgrammer
 
 ### Software
 #### Linux: 
