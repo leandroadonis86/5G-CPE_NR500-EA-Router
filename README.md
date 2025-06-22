@@ -97,7 +97,7 @@ Internet keeps losing connection and is not antenna signal?
 
 #### No Wifi? 
 
-- Probablity pcie bug or wifi faulty, internal driver malfuction. Have a look on `dmesg` of your device.
+- Probability pcie bug or wifi faulty, internal driver malfuction. Have a look on `dmesg` of your device.
 
 Any of this errors on the list? 
 ```
