@@ -221,8 +221,8 @@ The Good News is iptables, it's available and running. Admin can block any acces
 ## Development
 One way easy to build an executable to run it on router is using the cross-compile option. Device system doesn't have any gcc toolchain to compile C however it runs files detailed like below:
 ```
-ELF 64-bit LSB executable, ARM aarch64, version 1 (GNU/Linux), statically linked, BuildID[sha1]=01cca0b280d788d901369e8ec12c9f4cba56cdfe, for GNU/Linux 3.14.0, stripped
-ELF 64-bit LSB executable, ARM aarch64, version 1 (GNU/Linux), statically linked, BuildID[sha1]=da1c9754f041a9a0330e1879e300a48fea4fd690, for GNU/Linux 3.7.0, stripped
+ELF 64-bit LSB executable, ARM aarch64, version 1 (GNU/Linux), statically linked, BuildID[sha1]=..., for GNU/Linux 3.14.0, stripped
+ELF 64-bit LSB executable, ARM aarch64, version 1 (GNU/Linux), statically linked, BuildID[sha1]=..., for GNU/Linux 3.7.0, stripped
 ```
 
 
