@@ -249,10 +249,10 @@ int main()
 :$ aarch64-linux-gnu-strip helloworld-aarch64
 ```
 
-4. Connect you Router (192.168.188.1) to the Host (192.168.188.2) with Ethernet Cable.
-5. Start TFTP Host service and allow any firewall block.
-6. Place the file `helloworld-aarch64` inside TFTP folder of the host server service is listening.
-7. Now on Router execute command to import the file from the host to router with: `tftp -g -r helloworld-aarch64 192.168.188.2`
+4. Connect Router (192.168.188.1) to the Host (192.168.188.2) with Ethernet Cable.
+5. Start TFTP Host service and allow pass by firewall if any.
+6. Place file `helloworld-aarch64` inside TFTP folder of the host server service is listening.
+7. Execute command to import file from the host to router with: `tftp -g -r helloworld-aarch64 192.168.188.2`
 8. Execute it by: `./helloworld-aarch64`.
 
 
