@@ -188,6 +188,15 @@ For the admin access on SSH session it's able to use tools like:
 - `tftp` transfer files to a server
   
   PC host as server: `sudo apt-get install tftpd-hpa`
+	```
+	:$ cat /etc/default/tftpd-hpa 
+	# /etc/default/tftpd-hpa
+	
+	TFTP_USERNAME="tftp"
+	TFTP_DIRECTORY="/home/pc/.tftp"
+	TFTP_ADDRESS="0.0.0.0:69"
+	TFTP_OPTIONS="--create --secure"
+	```
   
   Router: `tftp -g -r getfile.txt 192.168.188.2` or `tftp -p -l putfile.txt 192.168.188.2`
 
