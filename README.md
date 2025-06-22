@@ -198,7 +198,7 @@ For the admin access on SSH session it's able to use tools like:
 	TFTP_OPTIONS="--create --secure"
 	```
   
-  Router: `tftp -g -r getfile.txt 192.168.188.2` or `tftp -p -l putfile.txt 192.168.188.2`
+  Router client shell: `tftp -g -r getfile.txt 192.168.188.2` or `tftp -p -l putfile.txt 192.168.188.2`
 
   
 > [!NOTE]
