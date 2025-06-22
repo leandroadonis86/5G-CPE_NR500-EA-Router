@@ -193,7 +193,7 @@ For the admin access on SSH session it's able to use tools like:
 	# /etc/default/tftpd-hpa
 	
 	TFTP_USERNAME="tftp"
-	TFTP_DIRECTORY="/home/pc/.tftp"
+	TFTP_DIRECTORY="/home/pc/tftp"
 	TFTP_ADDRESS="0.0.0.0:69"
 	TFTP_OPTIONS="--create --secure"
 	```
