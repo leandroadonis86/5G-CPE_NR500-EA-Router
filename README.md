@@ -218,6 +218,43 @@ Example 2 POST:
 
 The Good News is iptables, it's available and running. Admin can block any access permanently to local or internet with specified rule over shell.
 
+## Development
+One way easy to build a executable to run on router is using the cross-compile option. Device system doesn't have any gcc toolchain to compile C however it runs files detailed like below:
+```
+ELF 64-bit LSB executable, ARM aarch64, version 1 (GNU/Linux), statically linked, BuildID[sha1]=01cca0b280d788d901369e8ec12c9f4cba56cdfe, for GNU/Linux 3.14.0, stripped
+ELF 64-bit LSB executable, ARM aarch64, version 1 (GNU/Linux), statically linked, BuildID[sha1]=da1c9754f041a9a0330e1879e300a48fea4fd690, for GNU/Linux 3.7.0, stripped
+```
+
+How to make and run your own "Hello world!" on Router system?
+1. For linux* users first install the package: 
+```
+:$ sudo apt install gcc make gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu
+```
+*System used (Ubuntu 20.04.6 LTS 64bit, Kernel linux 5.4.0-200-generic x86_64)
+
+2. Code C:
+```
+#include <stdio.h>
+int main()
+{
+	printf("Hello World!\n");
+	return 0;
+}
+```
+
+3. Compile the source using and make it stripped:
+```
+:$ aarch64-linux-gnu-gcc -g helloworld.c -o helloworld-aarch64 -static
+:$ aarch64-linux-gnu-strip helloworld-aarch64
+```
+
+4. Connect you Router (192.168.188.1) to the Host (192.168.188.2) with Ethernet Cable.
+5. Start TFTP Host service and allow any firewall block.
+6. Place the file `helloworld-aarch64` inside TFTP folder of the host server service is listening.
+7. Now on Router execute command to import the file from the host to router with: `tftp -g -r helloworld-aarch64 192.168.188.2`
+8. Execute it by: `./helloworld-aarch64`.
+
+
 ## Tools
 - ### Hardware
 USB-C to USB-C Data cable (not for charge use)
