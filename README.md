@@ -243,7 +243,7 @@ int main()
 }
 ```
 
-3. Compile the source using and make it stripped:
+3. Compile the C source and make it stripped:
 ```
 :$ aarch64-linux-gnu-gcc -g helloworld.c -o helloworld-aarch64 -static
 :$ aarch64-linux-gnu-strip helloworld-aarch64
