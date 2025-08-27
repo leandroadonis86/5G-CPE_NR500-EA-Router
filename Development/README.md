@@ -5,6 +5,7 @@ It's a rebuild to improve and fix security issues for applications in the main O
 This can miss some library and give errors in compilation due to different version and may not be compatible,
  you may need to troubleshoot it.
 
+Download available link: `https://files.fm/f/rs3dugng9x`
 
 ## Contents
 "/unisoc-initgc/udx710-module+unisoc-initgc-1.0+202.../sysroot/aarch64-unisoc-linux" directory with library from router device.
