@@ -274,12 +274,11 @@ CH341A MinProgrammer
 
 - ### Software
 #### Linux: 
-GHidra v.11.3, Postman v.11.35, Flashroom v.1.5.0, Binwalk v.2.2.0, Pacextractor, Jefferson
+GHidra v.11.3, Postman v.11.35, Wireshark, Flashroom v.1.5.0, Binwalk v.2.2.0, Pacextractor, Jefferson
 
 #### Windows: 
 QCOM v.1.8, SPD Download R.27, Platform ADB
 
-- ### Extra
-#### Scripting: ...
+
 
 
