@@ -14,7 +14,9 @@ Download available link: `https://files.fm/f/rs3dugng9x`
 
 ## Requirements
 -Host PC with Ubuntu 20.04.6 LTS 64bit, Kernel linux 5.4.0-200-generic x86_64
+
 -TFTP server installed on PC (tftpd-hpa)
+
 -root access on Router
 
 
@@ -100,8 +102,11 @@ WITH_CJSON:=no
 
 ## Send and Execute on router
 -connect router 192.168.188.1 to the PC 192.168.188.2 with Ethernet cable.
+
 -start tftp server in the host PC
+
 -place the compiled file "helloworld-aarch64" inside tftp folder on PC
+
 -on router set RW mode for your partition
 
 `:$ mount -o remount,rw /`
