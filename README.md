@@ -14,13 +14,18 @@ Fix, Debug, Access, Tools, Tests and more functionalities for this router.
 + OS release, unisoc-initgc-distro udx710-module+unisoc-initgc-1.0+W23.51.2:12.18.47+user+native (sumo)
 + JBC version, v3.2.2543.12.18
 
+---
+
 + SW, RG500UEAABxCOMSLICv3.3.2634.16.16
 + OS release, unisoc-initgc-distro udx710-module+unisoc-initgc-1.0+W24.12.2:16.16.53+user+native (sumo)
 + JBC version, v3.3.2634.16.16
-  
+
+---
+
 + SW, RG500UEAABxISPv3.2.2543.13.41
 + OS release, unisoc-initgc-distro udx710-module+unisoc-initgc-1.0+W23.51.2:13.41.02+user+native (sumo)
 + JBC version, v3.2.2543.13.41
+
 ```
 ,-------------------------------------------------------------,
 | RG500UEAABxCOMSLICv3.4.2731.16.43                           |
