@@ -1,14 +1,17 @@
 # 5G-CPE NR500-EA Router
 Fix, Debug, Access, Tools, Tests and more functionalities for this router.
 
-+ SW, RG500UEAABxCOMSLICv3.4.2731.16.43
++ Quectel SDK version, quectel_RXX00U_sdk_03.001S09
 + CPU, Unisoc UDX710 
 + Shell, Linux version 4.14.98 (jboneos@) (gcc version 9.3.0 (GCC))
+
+---
+
++ SW, RG500UEAABxCOMSLICv3.4.2731.16.43
 + OS release, unisoc-initgc-distro udx710-module+unisoc-initgc-1.0+W24.26.1:16.43.31+user+native (sumo)
 + JBC version, v3.4.2731.16.43
-+ Quectel SDK version, quectel_RXX00U_sdk_03.001S09
   
---- or ---
+---
 
 + SW, RG500UEAABxCOMSLICv3.3.2634.16.16
 + OS release, unisoc-initgc-distro udx710-module+unisoc-initgc-1.0+W24.12.2:16.16.53+user+native (sumo)
