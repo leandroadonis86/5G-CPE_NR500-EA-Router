@@ -9,15 +9,16 @@ Download available link: `https://files.fm/f/rs3dugng9x`
 
 ## Contents
 "/unisoc-initgc/udx710-module+unisoc-initgc-1.0+202.../sysroot/aarch64-unisoc-linux" directory with library from router device.
+
 "/unisoc-initgc/udx710-module+unisoc-initgc-1.0+202.../sysroot/x86_64-unisocsdk-linux" directory with library from host pc.
 
 
 ## Requirements
--Host PC with Ubuntu 20.04.6 LTS 64bit, Kernel linux 5.4.0-200-generic x86_64
+- Host PC with Ubuntu 20.04.6 LTS 64bit, Kernel linux 5.4.0-200-generic x86_64
 
--TFTP server installed on PC (tftpd-hpa)
+- TFTP server installed on PC (tftpd-hpa)
 
--root access on Router
+- "root" user access
 
 
 ## Instalation
@@ -36,7 +37,8 @@ or manually copy "unisoc-initgc" folder to Host PC "/opt" and check all file per
 
 ## Development
 "Hello word" app:
--code in C like below
+
+- code in C like below
 
 ```
 #include <stdio.h>
@@ -47,11 +49,11 @@ int main()
 }
 ```
 
--compile it
+- compile it
 
 `:$ aarch64-linux-gnu-gcc -g helloworld.c -o helloworld-aarch64 -static`
 
--make it stripped
+- make it stripped
 
 `:$ aarch64-linux-gnu-strip helloworld-aarch64`
 
@@ -101,35 +103,35 @@ WITH_CJSON:=no
 
 
 ## Send and Execute on router
--connect router 192.168.188.1 to the PC 192.168.188.2 with Ethernet cable.
+- connect router 192.168.188.1 to the PC 192.168.188.2 with Ethernet cable.
 
--start tftp server in the host PC
+- start tftp server in the host PC
 
--place the compiled file "helloworld-aarch64" inside tftp folder on PC
+- place the compiled file "helloworld-aarch64" inside tftp folder on PC
 
--on router set RW mode for your partition
+- on router set RW mode for your partition
 
 `:$ mount -o remount,rw /`
 
--on router home directory execute to import the file
+- on router home directory execute to import the file
 
 `:$ tftp -g -r helloworld-aarch64 192.168.188.2`
 
--change permitions to 777
+- change permitions to 777
 
 `:$ chmod 777 helloworld-aarch64`
 
--and execute by:
+- and execute by:
 
 `:$ ./helloworld-aarch64`
 
 
 ## File compression compatible
--check the output file
+- check the output file
 
 `:$ file helloworld-aarch64`
 
--supported type of file in the Router
+- supported type of file in the Router
 
 ```
 ELF 64-bit LSB executable, ARM aarch64, version 1 (GNU/Linux), statically linked, BuildID[sha1]=..., for GNU/Linux 3.14.0, stripped
