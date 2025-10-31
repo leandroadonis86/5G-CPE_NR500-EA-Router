@@ -28,7 +28,7 @@ install the package (prefered):
 
 or execute:
 
-`$: sudo chmod 777 nisoc-initgc-glibc-x86_64-unisoc-console-image-aarch64-toolchain-udx710-module+unisoc-initgc-1.0+20201024+userdebug+native.sh`
+`$: sudo chmod 777 unisoc-initgc-glibc-x86_64-unisoc-console-image-aarch64-toolchain-udx710-module+unisoc-initgc-1.0+20201024+userdebug+native.sh`
 
 `$: ./unisoc-initgc-glibc-x86_64-unisoc-console-image-aarch64-toolchain-udx710-module+unisoc-initgc-1.0+20201024+userdebug+native.sh`
 
