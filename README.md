@@ -81,6 +81,11 @@ RG500U-EA include one SPREADTRUM chip UDX710 with Dual-core ARM Cortex-A55 proce
 - chip 8-pin 12v to 5v voltage regulator, for 7.4v Li-on batery,
 - ASIX AX88179 Gigabit Ethernet Controller, for USB 3.0.
 
+### Funcitonalities,
+- Router Web interface: `http://192.168.188.1/home.asp`
+- Access to AT Commands: `http://192.168.188.1/at_command.asp`
+- Change device IMEI: `http://192.168.188.1/deviceimei.asp`
+
 ### Upgrade
 Currently, there's no firmware upgrade or fixes and contacting the manufacturer they will not answer so is not possible to fix previously announced security flaws. The only support available is on the (Quectel)[https://forums.quectel.com/tag/5g] forums, which they provide some useful applications and firmware for the modem. For this router the firmware available from Quectel remove some functions and modules, like wifi AP, due to be a standart version of the firmware. Router will no longer use Wifi and work only as a modem connected by USB although it will fix all the issues.
 
@@ -146,7 +151,7 @@ No USB device?
 
 1. Check device drivers for your current system.
 2. Enter the Router webpage as root and enable "USB Device" option switch at "Engineering Setting".
-3. Make sure using the correct mode on `AT+QCFG:“usbnet”` for your current system. Windows: `3` = RNDIS mode, Linux: `5` = NCM mode.
+3. Make sure using the correct mode on `AT+QCFG=“usbnet”,(3,5)` for your current system. Windows: `3` = RNDIS mode, Linux: `5` = NCM mode.
 
 ...
 
@@ -178,12 +183,12 @@ JBoneOS > help
 
 JBoneOS >
 ``` 
-- Router `http:\\` webpage with a root access providing more options like debug mode switch for wifi, debug on switch, usb switch mode. There is an "AT Command" webpage available to anyone also referend in "Issues". 
+- Router `http:\\` webpage with a root access providing more options like debug mode switch for wifi, debug on switch, usb switch mode. There is an "AT Command" webpage available to anyone `http://192.168.188.1/at_command.asp`. 
 - It's also possible to send "AT Command" over SSH using `echo "AT" > /dev/smd1` but before it's necessary to `cat /dev/smd1` to see the full output while sending commands in a different window.
 - Adbd service file is present on this router but is not possible to turn it on just using the AT command `AT+QCFG="usbcfg",0x2c7c,0x0900,1,1,1,1,1,1,1` because it's unavaible by default and it will bring settings back. Different from other firmware versions that was possible to switch abd on with a session token and was already configured in the system. I've looked and debuged the adbd service file, similar code to one available in CodeLinaro but it was customized by JBC when it was compiled, able to remove the `disable by jbc` and run the service althought it's unable to find any device to connect over the listen 5555 port, `netstat` did not show any open 5555 port either, still on WIP. 
 - There is accessible UART on PCB for 1.8v with few available boot options and if device drivers are installed it's possible to connect on 4 COM ports for specific use and 1 Modem device for directly as a RNDIS modem.
 > [!NOTE]
-> it's necessary to execute `AT+QCFG:“usbnet”` At command and select the mode for operative system you use to recognize device via USB. Default configuration is for windows, device describe as `VID:0x2C7C PID:0x0900`.
+> it's necessary to execute `AT+QCFG=“usbnet”` At command and select the mode for operative system you use to recognize device via USB. Default configuration is for windows, device describe as `VID:0x2C7C PID:0x0900`.
 
 On SSH session anyone is able to print file content and inspect inside of directories. 
 - For vieweing directory contents type: `cd` press `[space]` and press `[tab]` `[tab]`. 
