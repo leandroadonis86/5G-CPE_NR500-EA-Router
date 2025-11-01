@@ -81,7 +81,7 @@ RG500U-EA include one SPREADTRUM chip UDX710 with Dual-core ARM Cortex-A55 proce
 - chip 8-pin 12v to 5v voltage regulator, for 7.4v Li-on batery,
 - ASIX AX88179 Gigabit Ethernet Controller, for USB 3.0.
 
-### Funcitonalities,
+#### Functionalities,
 - Router Web interface: `http://192.168.188.1/home.asp`
 - Access to AT Commands: `http://192.168.188.1/at_command.asp`
 - Change device IMEI: `http://192.168.188.1/deviceimei.asp`
