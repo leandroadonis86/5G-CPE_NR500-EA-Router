@@ -73,7 +73,8 @@ The hardware interface on PCB version NR500-WIFI6-V2.0 dated 2023/10/18 is compo
 - Microsemi MSC Le6943 IC, for SLIC phone line,
 - TDA L69BW, protects voltage on the phone line,
 - Macronix KH25L1606E FlashRom, of 16Mb 64K each block,
-- Globaltech_DS_GS339 Voltage comparator, indicate the battery level on front leds.
+- Globaltech_DS_GS339 Voltage comparator, indicate the battery level on front leds,
+- BCT4221A USB2.0/3.0 Hi-Speed Switches, near USBc connector.
 
 RG500U-EA include one SPREADTRUM chip UDX710 with Dual-core ARM Cortex-A55 processor Core Embedded, up to 1.35GHz. Recommended toolchain use ARMv8.2-A 64bit (aarch64) for UNISOC SC9863A.
 
@@ -96,7 +97,7 @@ There are some severe insecure internet and Ethernet issues, as claimed on the m
 
 https://github.com/advisories/GHSA-m584-rmpj-6q5p
 
-### Hardware
+### Troubleshooting
 
 Device keeps rebooting or sets to default manufacture configuration and you don't know why?
 
@@ -104,13 +105,14 @@ Device keeps rebooting or sets to default manufacture configuration and you don'
 - Check "Vulnerability" to see the cause.
 - Block all external unkwon access to the router access with `iptables`.
 
+
 Internet keeps losing connection and is not antenna signal?
 
 - Check if SIM card option in Router webpage is locked to the inserted SIM port.
 - Use manual settings and lock to the best Antenna and Band in Router webpage.
 
 
-#### No Wifi? 
+No Wifi? 
 
 - Probability pcie bug or wifi faulty, internal driver malfuction. Have a look on `dmesg` of device.
 
@@ -127,16 +129,12 @@ Any device on `lspci` in your router device?
  - `01:00.0 Class 0280: 17cb:1103` refer to "QCNFA765 Wireless Network Adapter" 
  - `00:00.0 Class 0604: 16c3:abcd` refer to "Synopsys, Inc. HAPS USB3 xHCI controller (DWC_usb3) / PCIe bridge"
 
-...
 
-#### No Ethernet?
+No Ethernet?
 
-1. Enable "USB Device" option switch at "Engineering Setting" tab will disable Ethernet by default.
+1. Enable "USB Device" switch at "Engineering Setting" tab will disable Ethernet by default. (NOT RECOMMENED TO TURN IT ON)
 2. Sometimes needs physical Reset button to be pressed to get it work.
 
-...
-
-### Software
 
 No 5g internet?
 
@@ -145,7 +143,6 @@ No 5g internet?
 3. Operator service not allowing.
 4. Use manual AT command to setup your specific network.
 
-...
 
 No USB device?
 
@@ -153,7 +150,6 @@ No USB device?
 2. Enter the Router webpage as root and enable "USB Device" option switch at "Engineering Setting".
 3. Make sure using the correct mode on `AT+QCFG=“usbnet”,(3,5)` for your current system. Windows: `3` = RNDIS mode, Linux: `5` = NCM mode.
 
-...
 
 ## Access
 
@@ -242,6 +238,15 @@ Example 2 POST:
 
 The Good News is iptables, it's available and running. Admin can block any access permanently to local or internet with specified rule over shell.
 
+## Recommendations
+
+1. Use Ethernet cable instead of USB Cable connection to perform any administration.
+2. Do not perform hard reset device button with Usb cable pluged in.
+3. Enable "USB Device" option at Router's page may damage device if using long term, device is using old drivers.
+4. When perform hard reset it only needs 8 seconds.
+5. Connect any cable after Wifi led turn ON unless for sys spreadtrum backups.
+6. WPS is bugged not working properly, avoid pressing the button.
+
 ## Development
 One way easy to build an executable to run it on router is using the cross-compile option. Device system doesn't have any gcc toolchain to compile C however it runs files detailed like below:
 ```
@@ -282,7 +287,11 @@ int main()
 
 ## Tools
 - ### Hardware
-USB-C to USB-C Data cable (not for charge use)
+Ethernet Cable (prefered)
+
+USB-C to USB-A Data cable (prefered)
+
+USB-C to USB-C Data cable
 
 #### Device: 
 CH341A MinProgrammer
