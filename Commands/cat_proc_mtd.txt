@@ -1,0 +1,13 @@
+root@udx710-module:~# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 00040000 00040000 "splloader"
+mtd1: 00140000 00040000 "uboot"
+mtd2: 000c0000 00040000 "sml"
+mtd3: 00100000 00040000 "trustos"
+mtd4: 00140000 00040000 "ubootbak"
+mtd5: 000c0000 00040000 "smlbak"
+mtd6: 00100000 00040000 "trustosbak"
+mtd7: 00140000 00040000 "rawdata"
+mtd8: 00140000 00040000 "custinfo"
+mtd9: 1f740000 00040000 "ubipac"
+
