@@ -51,6 +51,7 @@ The code and scripts provided herein are for educational purposes only. By using
   2. Outdated or Incompatible: The code may be outdated or incompatible with your specific version of software, device, or environment. It is your responsibility to ensure that the code is appropriate for your particular circumstances.
   3. Technical Knowledge Required: This code is intended for individuals with a reasonable level of technical knowledge. You should only use this code if you are confident in your ability to understand and troubleshoot any potential issues.
   4. No Assumption of Responsibility: The authors do not assume any responsibility for any consequences resulting from the use of this code, including but not limited to data loss, system failures, or any other damages.
+  5. BACKUP EVERYTHING: No mather what always do backups of everything before proceed.
 
 By proceeding to use this code, you accept and agree to this disclaimer in its entirety.
 
